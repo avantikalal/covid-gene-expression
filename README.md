@@ -7,7 +7,7 @@ Hackathon team: gene expression analysis for Covid-19
 0. Check literature to select interesting genes to study
 1. Gathering datasets and downloading RNAseq from SRA/GEO 
 2. Pipeline to clean reads and map against human genome
-3. SNP calling: [kissplice]http://kissplice.prabi.fr/)
+3. SNP calling: [kissplice](http://kissplice.prabi.fr/)
 4. Splicing events
 5. Differential gene expression analysis (for all genes and SNPs)
 6. Pathway analysis
