@@ -24,3 +24,6 @@ biocLite("DESeq2", dep=T)
 # data-sources
 - SARS-MERS: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56192  
 - COVID: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507  
+
+# references
+- https://bioconductor.org/packages/release/bioc/html/DESeq2.html
