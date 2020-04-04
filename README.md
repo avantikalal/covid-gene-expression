@@ -14,6 +14,7 @@ Hackathon team: gene expression analysis for Covid-19
 7. Check the existence of chimeric reads
 8. Perform differential expression analysis on genes, transcripts and TEs
 9. Functional enrichment analysis
+10. SNP/Splicing on risk factor datasets for selected genes
 
 # software-tools
 
