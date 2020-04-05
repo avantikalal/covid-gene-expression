@@ -42,6 +42,7 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 - trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
 - STAR (https://github.com/alexdobin/STAR)
 - Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+- HISAT2 (https://daehwankimlab.github.io/hisat2/)
 - TEtools (https://github.com/l-modolo/TEtools)
 - TEtranscripts (http://hammelllab.labsites.cshl.edu/software)
 - LIONS (www.github.com/ababaian/LIONS)
