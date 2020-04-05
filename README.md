@@ -1,6 +1,13 @@
 # covid-gene-expression
 Hackathon team: gene expression analysis for Covid-19
 
+# Main Objective
+We want to perform RNAseq-based analyses on published datasets in order to better understand the interaction between human host and virus.
+
+## Deliverables
+_Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected datasets to search for new candidate genes for testing experimentally
+_Methodological:_ Create a packaged reproducible pipeline in Docker to help scientists to easily treat their RNA-Seq data and for us if any new dataset comes out
+
 [Tasks](https://github.com/avantikalal/covid-gene-expression/projects/1)
 
 # workflow
