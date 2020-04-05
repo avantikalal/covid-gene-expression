@@ -1,7 +1,12 @@
-# covid-gene-expression
-Hackathon team: gene expression analysis for Covid-19
+# Covid-19 Gene Expression Work Group (This is for now a private project)
+Hackathon team: gene expression analysis for Covid-19 Virtual Biohackathon (vBH)
 
-# Main Objective
+### Link to vBH Github
+https://github.com/virtual-biohackathons/covid-19-bh20
+### Official Gene Expression Work Group Page (Public page)
+https://github.com/virtual-biohackathons/covid-19-bh20/wiki/GeneExpression
+
+## Main Objective
 We want to perform RNAseq-based analyses on published datasets in order to better understand the interaction between human host and virus.
 
 ## Deliverables
@@ -10,7 +15,7 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 
 [Tasks](https://github.com/avantikalal/covid-gene-expression/projects/1)
 
-# workflow
+## Workflow
 0. Check literature to select interesting genes/datasets to study
 1. Downloading RNAseqs from SRA/GEO 
 2. Pipeline to clean reads
@@ -23,17 +28,49 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 9. Functional enrichment analysis
 10. SNP/Splicing on risk factor datasets for selected genes
 
-# software-tools
+# Software Used during this project
 
-source("http://bioconductor.org/biocLite.R")  
-biocLite("DESeq2", dep=T)
+## Command line tools
+- FastQC (https://github.com/s-andrews/FastQC)
+- Fastq-screen (https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/)
+- trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
+- STAR (https://github.com/alexdobin/STAR)
+- Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+- TEtools (https://github.com/l-modolo/TEtools)
+- TEtranscripts (http://hammelllab.labsites.cshl.edu/software)
+- LIONS (www.github.com/ababaian/LIONS)
+- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/)
+- featureCounts (http://subread.sourceforge.net)
+- MultiQC (https://github.com/ewels/MultiQC)
+- KissSplice (http://kissplice.prabi.fr/)
+
+## R packages used during this project
+
+### Direct install
+#### ggplot2
+install.packages("ggplot2")
+####
+
+### Biocmanager install
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+### DESEq2
+BiocManager::install("DESeq2")
+### EdgeR
+BiocManager::install("EdgeR")
+### Limma-Voom
+BiocManager::install("limma")
 
 ## code repositories
 
-# data-sources
+## data-sources
+
+### Virus infected studies
 - SARS-MERS: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56192  
 - COVID: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507 
 - Murine coronavirus (M-CoV): https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4111/
+### Increased risk factors studies
 
-# references
-- https://bioconductor.org/packages/release/bioc/html/DESeq2.html
+
+## references
+
