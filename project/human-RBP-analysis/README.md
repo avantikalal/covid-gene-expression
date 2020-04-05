@@ -6,6 +6,8 @@
 3. Scan the viral genome for these PWMs.
 4. Annotate potential RBP binding sites on the viral genome
 5. Check for expression/activity of these RBPs in relevant cell types
+6. Check whether any of the RBP binding sites are modified in different isolates of SARS-CoV-2
+7. Check whether these RBP binding sites existed in closely related viruses, e.g. the bat coronavirus sequences similar to SARS-CoV-2.
 
 ## Task tracker: 
 https://github.com/avantikalal/covid-gene-expression/projects/2
