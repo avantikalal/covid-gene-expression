@@ -21,6 +21,8 @@ Hackathon team: gene expression analysis for Covid-19
 source("http://bioconductor.org/biocLite.R")  
 biocLite("DESeq2", dep=T)
 
+## code repositories
+
 # data-sources
 - SARS-MERS: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56192  
 - COVID: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507 
