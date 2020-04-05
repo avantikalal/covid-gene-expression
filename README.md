@@ -1,4 +1,4 @@
-# Covid-19 Gene Expression Work Group (This is for now a private project)
+# Covid-19 Gene Expression Work Group (Private project)
 Hackathon team: gene expression analysis for Covid-19 Virtual Biohackathon (vBH)
 
 ### Link to vBH Github
@@ -59,15 +59,15 @@ install.packages("ggplot2")
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 ```
-### DESEq2
+#### DESEq2
 ```
 BiocManager::install("DESeq2")
 ```
-### EdgeR
+#### EdgeR
 ```
 BiocManager::install("EdgeR")
 ```
-### Limma-Voom
+#### Limma-Voom
 ```
 BiocManager::install("limma")
 ```
