@@ -5,8 +5,8 @@
 # Output: BAM file
 # Script command line usage: sh alignment.sh SAMPLE
 
-InputDir=#Replace with input directory
-OutputDir=#Replace with output directory
+InputDir=fastq
+OutputDir=bam
 GenomeDir=genomes/GRCh38/starIndex_gencode24
 
 # Run STAR on single end fastq.gz RNA-seq samples
