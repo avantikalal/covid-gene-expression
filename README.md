@@ -52,7 +52,6 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 ```
 install.packages("ggplot2")
 ```
-####
 
 ### Biocmanager install
 ```
@@ -71,6 +70,11 @@ _Limma-Voom_
 ```
 BiocManager::install("limma")
 ```
+
+### Devtools install
+install.packages("devtools")
+_SARTools_
+install_github("PF2-pasteur-fr/SARTools", build_opts="--no-resave-data")
 
 ## Code repositories
 
