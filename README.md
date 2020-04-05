@@ -19,9 +19,7 @@ _Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected dataset
 
 _Methodological:_ Create a packaged reproducible pipeline in Docker to help scientists to easily treat their RNA-Seq data and for us if any new dataset comes out
 
-We have four main projects going on:
-
-To summarize them :
+We have four main projects going on. To summarize them :
 
 1. SARS-CoV-2 infection global analyses: will include global gene expression, functional and regulation of gene expression analyses.
 2. Human-virus interaction analyses : will try to search RNA-binding proteins that might be key in the interaction between human and SARS-CoV-2.
