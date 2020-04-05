@@ -19,9 +19,7 @@ _Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected dataset
 
 _Methodological:_ Create a packaged reproducible pipeline in Docker to help scientists to easily treat their RNA-Seq data and for us if any new dataset comes out
 
-[Tasks](https://github.com/avantikalal/covid-gene-expression/projects/1)
-
-We have four main projects going on, you can find them here: https://github.com/avantikalal/covid-gene-expression/projects
+We have four main projects going on:
 
 To summarize them :
 
@@ -31,6 +29,8 @@ To summarize them :
 4. Subtyping of expression response to drugs after COVID infection: will focus on trying to search for potential drugs that could impact in important genes for the interaction of human and virus.
 5. Reporting findings to electronic medical records : will try to make these findings arrive at the hands of clinicians.
 
+## Progress tracking
+We are tracking progress on project-specific boards here: https://github.com/avantikalal/covid-gene-expression/projects
 
 # Software Used during this project
 
