@@ -6,3 +6,7 @@
 
 2) Read counts
 - StringTie: v2.1.1
+
+*References*
+1) Human
+- GRCh38: Gencode 24
