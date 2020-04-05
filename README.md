@@ -77,6 +77,7 @@ install.packages("devtools")
 ```
 _SARTools_
 ```
+library(devtools)
 install_github("PF2-pasteur-fr/SARTools", build_opts="--no-resave-data")
 ```
 
