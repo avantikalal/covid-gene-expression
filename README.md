@@ -8,7 +8,7 @@ https://github.com/virtual-biohackathons/covid-19-bh20/wiki/GeneExpression
 
 ## Main Objective
 We want to perform RNAseq-based analyses on published datasets in order to better understand the interaction between human host and virus.
-![We want to focus on already knonw and also on new candidate genes that may play a punctual or a general role in the interaction between host and virus. To this end, we will perform extensive RNAseq analyses as described in the workflow below](https://github.com/avantikalal/covid-gene-expression/blob/master/Diagram.png){:height="50%" width="50%"}
+![We want to focus on already knonw and also on new candidate genes that may play a punctual or a general role in the interaction between host and virus. To this end, we will perform extensive RNAseq analyses as described in the workflow below]<img src="https://github.com/avantikalal/covid-gene-expression/blob/master/Diagram.png" width="100">
 
 ## Deliverables
 _Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected datasets to search for new candidate genes for testing experimentally
