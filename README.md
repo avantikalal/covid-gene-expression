@@ -53,7 +53,7 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 install.packages("ggplot2")
 ```
 
-### Biocmanager install
+### BiocManager install
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
