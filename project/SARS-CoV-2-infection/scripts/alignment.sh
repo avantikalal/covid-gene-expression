@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# STAR Aligner (v. 2.5.2b): mapping raw sequencing data (fastq.gz) to reference genome
+# STAR Aligner (v. 2.5.2b): mapping reads (fastq.gz) to reference genome
 # Input: fastq.gz file
 # Output: BAM file
 # Script command line usage: sh alignment.sh SAMPLE
