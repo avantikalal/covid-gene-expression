@@ -45,7 +45,7 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 - MultiQC (https://github.com/ewels/MultiQC)
 - KissSplice (http://kissplice.prabi.fr/)
 
-## R packages used during this project
+## R packages
 
 ### Direct install
 #### ggplot2
