@@ -11,7 +11,7 @@ We want to perform RNAseq-based analyses on published datasets in order to bette
 
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/master/Diagram.png" width="200">
-  <figcaption>Fig.1 - We want to focus on already known (such as ACE2 and TMPRSS2) but also on new candidate genes that may play a punctual or a general role in the interaction between host and virus. To this end, we will perform extensive RNAseq analyses as described in the workflow section below</figcaption>
+  <figcaption>Fig.1 - We want to focus on already known genes (such as ACE2 and TMPRSS2) but also on new candidate ones that may play a punctual or a general role in the interaction between host and virus. To this end, we will perform extensive RNAseq analyses as described in the workflow section below</figcaption>
 </figure>
 
 ## Deliverables
