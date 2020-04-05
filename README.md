@@ -72,9 +72,13 @@ BiocManager::install("limma")
 ```
 
 ### Devtools install
+```
 install.packages("devtools")
+```
 _SARTools_
+```
 install_github("PF2-pasteur-fr/SARTools", build_opts="--no-resave-data")
+```
 
 ## Code repositories
 
