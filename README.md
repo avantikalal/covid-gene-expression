@@ -21,18 +21,16 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 
 [Tasks](https://github.com/avantikalal/covid-gene-expression/projects/1)
 
-## Workflow
-0. Check literature to select interesting genes/datasets to study
-1. Downloading RNAseqs from SRA/GEO 
-2. Pipeline to clean reads
-3. Map against viral genome (+ viral DBs)
-4. Map against human genome (genes and isoforms pipelines)
-5. Check shared reads between both genomes
-6. Map reads against transposable elements
-7. Check the existence of chimeric reads
-8. Perform differential expression analysis on genes, transcripts and TEs
-9. Functional enrichment analysis
-10. SNP/Splicing on risk factor datasets for selected genes
+We have four main projects going on, you can find them here: https://github.com/avantikalal/covid-gene-expression/projects
+
+To summarize them :
+
+1. SARS-CoV-2 infection global analyses: will include global gene expression, functional and regulation of gene expression analyses.
+2. Human-virus interaction analyses : will try to search RNA-binding proteins that might be key in the interaction between human and SARS-CoV-2.
+3. Increased risk factors analyses: will look for gene expression data in other datasets to compare especially with selected genes from previous analyses.
+4. Subtyping of expression response to drugs after COVID infection: will focus on trying to search for potential drugs that could impact in important genes for the interaction of human and virus.
+5. Reporting findings to electronic medical records : will try to make these findings arrive at the hands of clinicians.
+
 
 # Software Used during this project
 
@@ -89,7 +87,9 @@ install_github("PF2-pasteur-fr/SARTools", build_opts="--no-resave-data")
 
 ## Code repositories
 
+
 ## Data-sources
+
 
 ### Virus infection studies
 - SARS-MERS: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56192  
