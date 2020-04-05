@@ -48,7 +48,7 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 ## R packages
 
 ### Direct install
-    _ggplot2_
+   _ggplot2_
 ```
 install.packages("ggplot2")
 ```
@@ -59,15 +59,15 @@ install.packages("ggplot2")
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 ```
-    _DESEq2_
+_DESEq2_
 ```
 BiocManager::install("DESeq2")
 ```
-    _EdgeR_
+_EdgeR_
 ```
 BiocManager::install("EdgeR")
 ```
-    _Limma-Voom_
+_Limma-Voom_
 ```
 BiocManager::install("limma")
 ```
