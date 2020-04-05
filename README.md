@@ -23,7 +23,8 @@ biocLite("DESeq2", dep=T)
 
 # data-sources
 - SARS-MERS: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56192  
-- COVID: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507  
+- COVID: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507 
+- Murine coronavirus (M-CoV): https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4111/
 
 # references
 - https://bioconductor.org/packages/release/bioc/html/DESeq2.html
