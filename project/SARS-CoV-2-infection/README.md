@@ -8,5 +8,5 @@
 - StringTie: v2.1.1
 
 *References*
-1) Human
+1) Homo sapiens
 - GRCh38: Gencode 24
