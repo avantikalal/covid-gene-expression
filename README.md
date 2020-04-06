@@ -19,6 +19,8 @@ _Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected dataset
 
 _Methodological:_ Create a packaged reproducible pipeline in Docker to help scientists to easily treat their RNA-Seq data and for us if any new dataset comes out
 
+## Projects
+
 We have four main projects going on. To summarize them :
 
 1. SARS-CoV-2 infection global analyses: will include global gene expression, functional and regulation of gene expression analyses.
@@ -27,74 +29,9 @@ We have four main projects going on. To summarize them :
 4. Subtyping of expression response to drugs after COVID infection: will focus on trying to search for potential drugs that could impact in important genes for the interaction of human and virus.
 5. Reporting findings to electronic medical records : will try to make these findings arrive at the hands of clinicians.
 
+Please see the [project](project) folder for details on each individual project.
+
 ## Progress tracking
 We are tracking progress on project-specific boards here: https://github.com/avantikalal/covid-gene-expression/projects
 
-# Software Used during this project
-
-## Command line tools
-- FastQC (https://github.com/s-andrews/FastQC)
-- Fastq-screen (https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/)
-- trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
-- STAR (https://github.com/alexdobin/STAR)
-- Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
-- HISAT2 (https://daehwankimlab.github.io/hisat2/)
-- TEtools (https://github.com/l-modolo/TEtools)
-- TEtranscripts (http://hammelllab.labsites.cshl.edu/software)
-- LIONS (www.github.com/ababaian/LIONS)
-- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/)
-- featureCounts (http://subread.sourceforge.net)
-- MultiQC (https://github.com/ewels/MultiQC)
-- KissSplice (http://kissplice.prabi.fr/)
-
-## R packages
-
-### Direct install
-   _ggplot2_
-```
-install.packages("ggplot2")
-```
-
-### BiocManager install
-```
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-```
-_DESEq2_
-```
-BiocManager::install("DESeq2")
-```
-_EdgeR_
-```
-BiocManager::install("EdgeR")
-```
-_Limma-Voom_
-```
-BiocManager::install("limma")
-```
-
-### Devtools install
-```
-install.packages("devtools")
-```
-_SARTools_
-```
-library(devtools)
-install_github("PF2-pasteur-fr/SARTools", build_opts="--no-resave-data")
-```
-
-## Code repositories
-
-
-## Data-sources
-
-
-### Virus infection studies
-- SARS-MERS: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56192  
-- COVID: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507 
-- Murine coronavirus (M-CoV): https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4111/
-### Increased risk factors studies
-
-
-## References
 

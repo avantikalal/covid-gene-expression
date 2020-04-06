@@ -27,3 +27,61 @@
     - counts_p3.sh
     - DE_prep.sh
     - prepDE.py (auxiliary, from the creators of StringTie)
+
+## Software used in this project
+### Command line tools
+- FastQC (https://github.com/s-andrews/FastQC)
+- Fastq-screen (https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/)
+- trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
+- STAR (https://github.com/alexdobin/STAR)
+- Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+- HISAT2 (https://daehwankimlab.github.io/hisat2/)
+- TEtools (https://github.com/l-modolo/TEtools)
+- TEtranscripts (http://hammelllab.labsites.cshl.edu/software)
+- LIONS (www.github.com/ababaian/LIONS)
+- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/)
+- featureCounts (http://subread.sourceforge.net)
+- MultiQC (https://github.com/ewels/MultiQC)
+- KissSplice (http://kissplice.prabi.fr/)
+
+### R packages
+
+#### Direct install
+   _ggplot2_
+```
+install.packages("ggplot2")
+```
+
+#### BiocManager install
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+```
+_DESEq2_
+```
+BiocManager::install("DESeq2")
+```
+_EdgeR_
+```
+BiocManager::install("EdgeR")
+```
+_Limma-Voom_
+```
+BiocManager::install("limma")
+```
+
+#### Devtools install
+```
+install.packages("devtools")
+```
+_SARTools_
+```
+library(devtools)
+install_github("PF2-pasteur-fr/SARTools", build_opts="--no-resave-data")
+```
+
+## Virus infection studies
+- SARS-MERS: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56192  
+- COVID: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507 
+- Murine coronavirus (M-CoV): https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4111/
+
