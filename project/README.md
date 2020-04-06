@@ -1,16 +1,14 @@
 # Projects
 
-## 1. Viral infection global analyses:
+## 1. [Viral infection global analyses](SARS-CoV-2-infection):
 * Transcriptome analyses to select differentially expressed genes
 * Isoform differential expression
 * Map RNAseq to virus
 * Functional and enrichment analyses
 * Search for global modulators of disease virulence and host susceptibility
 
-## 2. Human-virus interaction analyses:
-* Which human mRNAs and proteins interact with or are regulating the virus and vice-versa?
-* Are there human RNA-binding proteins potentially regulating the viral genome?
-* Include these in subsequent analyses
+## 2. [Human-virus interaction analyses](human-RBP-analysis):
+* Which human mRNAs and proteins interact with or are regulating the virus?
 
 ## 3. Increased risk factors analyses:
 * Select datasets from co-morbidities related to severeness of Covid-19
