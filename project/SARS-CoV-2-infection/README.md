@@ -30,21 +30,23 @@
 
 ## Software used in this project
 ### Command line tools
-- FastQC (https://github.com/s-andrews/FastQC)
-- Fastq-screen (https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/)
-- trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
-- STAR (https://github.com/alexdobin/STAR)
-- Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
-- HISAT2 (https://daehwankimlab.github.io/hisat2/)
-- TEtools (https://github.com/l-modolo/TEtools)
-- TEtranscripts (http://hammelllab.labsites.cshl.edu/software)
-- LIONS (www.github.com/ababaian/LIONS)
-- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/)
-- featureCounts (http://subread.sourceforge.net)
-- MultiQC (https://github.com/ewels/MultiQC)
-- KissSplice (http://kissplice.prabi.fr/)
+- FastQC (https://github.com/s-andrews/FastQC) [docker image](quay.io/biocontainers/fastqc:0.11.5--1)
+- Fastq-screen (https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/) [docker image](quay.io/biocontainers/fastq-screen:0.11.3--pl5.22.0_0)
+- trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)[docker image](quay.io/biocontainers/trimmomatic:0.33--1)
+- STAR (https://github.com/alexdobin/STAR)[docker image](quay.io/biocontainers/star:2.7.3a--0)
+- Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)[docker image](quay.io/biocontainers/bowtie2:2.4.1--py38he513fc3_0)
+- HISAT2 (https://daehwankimlab.github.io/hisat2/)[docker image](quay.io/biocontainers/hisat2:2.2.0--py37he1b5a44_0)
+- TEtools (https://github.com/l-modolo/TEtools)[docker image]()
+- TEtranscripts (http://hammelllab.labsites.cshl.edu/software)[docker image](quay.io/biocontainers/tetranscripts:2.1.4--py_0)
+- LIONS (www.github.com/ababaian/LIONS)[docker image](hpobiolab/lions)
+- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/)[docker image](quay.io/biocontainers/picard:2.22.2--0)
+- featureCounts (http://subread.sourceforge.net)[docker image](hpobiolab/feature-counts)
+- MultiQC (https://github.com/ewels/MultiQC)[docker image](quay.io/biocontainers/multiqc:1.8--py_2)
+- KissSplice (http://kissplice.prabi.fr/)[docker image](hpobiolab/kiss-splice)
 
 ### R packages
+
+Docker image: `hpobiolab/gene-expression-r`
 
 #### Direct install
    _ggplot2_

@@ -31,6 +31,9 @@ The script is in R and uses the following libraries:
 3. seqinr
 4. Biostrings
 
+### Dockerfile
+A docker file with all of the R dependencies is available at [hpobiolab/rbp-pwm-r](https://hub.docker.com/orgs/hpobiolab/repositories)
+
 ## Output
 `sitesets.RData` is the table of potential binding sites produced by `find_binding_sites.R`. To open this, type in an R terminal:
 ```
