@@ -111,11 +111,18 @@ sites = rbindlist(sites)
 # Match protein name
 sites = merge(sites, rbp_pwm, by="Matrix_id")
 
+# Find duplicate binding sites for the same protein and choose the one with the highest score
+sites = sites[sites[, .I[score == max(score)], by=.(start, end, strand, Gene_name)]$V1]
+sites = sites[!duplicated(sites[, .(start, end, strand, Gene_name)]),]
+
+# sort by position
+sites = sites[order(start),]
+
 # Add site length
 sites[, len:=nchar(seq)]
 
 # Save sites
-# save(sites, file="output/sites.RData")
+save(sites, file="output/sites.RData")
 
 ##############################################
 
