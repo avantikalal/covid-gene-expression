@@ -36,7 +36,7 @@
 - STAR (https://github.com/alexdobin/STAR)[docker image](quay.io/biocontainers/star:2.7.3a--0)
 - Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)[docker image](quay.io/biocontainers/bowtie2:2.4.1--py38he513fc3_0)
 - HISAT2 (https://daehwankimlab.github.io/hisat2/)[docker image](quay.io/biocontainers/hisat2:2.2.0--py37he1b5a44_0)
-- TEtools (https://github.com/l-modolo/TEtools)[docker image](zavolab/tetools:1.0.0)
+- TEtools (https://github.com/l-modolo/TEtools)[docker image](zavolab/tetools:1.0.0) **NB:** the command passed to Docker must specify python and the full path to the toolname, like so: `python3 /TEtools/TEcount.py`.
 - TEtranscripts (http://hammelllab.labsites.cshl.edu/software)[docker image](quay.io/biocontainers/tetranscripts:2.1.4--py_0)
 - LIONS (www.github.com/ababaian/LIONS)[docker image](hpobiolab/lions)
 - samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/)[docker image](quay.io/biocontainers/picard:2.22.2--0)
