@@ -1,0 +1,142 @@
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412291/3-9-wt2-16_S16_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412292/3-9-wt2-16_S16_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra47/SRZ/011412/SRR11412293/3-9-wt2-16_S16_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra42/SRZ/011412/SRR11412294/3-9-wt2-16_S16_L004_R1_001.fastq.gz
+cat 3-9-wt2-16_S1_L* > 3-9-wt2-16_S1.fastq.gz
+#mv 3-9-wt2-16_S1_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412287/3-9-wt1-15_S2_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412288/3-9-wt1-15_S2_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412289/3-9-wt1-15_S2_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412290/3-9-wt1-15_S2_L004_R1_001.fastq.gz
+cat 3-9-wt1-15_S2_L* > 3-9-wt1-15_S2.fastq.gz
+#mv 3-9-wt1-15_S2_L* tmp
+
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412283/3-9-mock2-14_S1_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra58/SRZ/011412/SRR11412284/3-9-mock2-14_S1_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412285/3-9-mock2-14_S1_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412286/3-9-mock2-14_S1_L004_R1_001.fastq.gz
+cat 3-9-mock2-14_S1_L* > 3-9-mock2-14_S1.fastq.gz
+#mv 3-9-mock2-14_S1_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412279/3-9-mock1-13_S20_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412280/3-9-mock1-13_S20_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412281/3-9-mock1-13_S20_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra58/SRZ/011412/SRR11412282/3-9-mock1-13_S20_L004_R1_001.fastq.gz
+cat 3-9-mock1-13_S20_L* > 3-9-mock1-13_S20.fastq.gz
+#mv 3-9-mock1-13_S20_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412275/svRNA184-RSV-1-indexF4_S16_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412276/svRNA184-RSV-1-indexF4_S16_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412277/svRNA184-RSV-1-indexF4_S16_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412278/svRNA184-RSV-1-indexF4_S16_L004_R1_001.fastq.gz
+cat svRNA184-RSV-1-indexF4_S16_L* > svRNA184-RSV-1-indexF4_S16.fastq.gz
+#mv svRNA184-RSV-1-indexF4_S16_L* tmp
+
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412271/svRNA184-RSV-3-indexH9_S18_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412272/svRNA184-RSV-3-indexH9_S18_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra16/SRZ/011412/SRR11412273/svRNA184-RSV-3-indexH9_S18_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412274/svRNA184-RSV-3-indexH9_S18_L004_R1_001.fastq.gz
+cat svRNA184-RSV-3-indexH9_S18_L* > svRNA184-RSV-3-indexH9_S18.fastq.gz
+#mv svRNA184-RSV-3-indexH9_S18_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412267/svRNA184-mock-1-indexF1_S13_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412268/svRNA184-mock-1-indexF1_S13_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412269/svRNA184-mock-1-indexF1_S13_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/011412/SRR11412270/svRNA184-mock-1-indexF1_S13_L004_R1_001.fastq.gz
+#cat svRNA184-mock-1-indexF1_S13_L* > svRNA184-mock-1-indexF1_S13.fastq.gz
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRZ/011412/SRR11412263/svRNA184-mock-3-indexF3_S15_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra58/SRZ/011412/SRR11412264/svRNA184-mock-3-indexF3_S15_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412265/svRNA184-mock-3-indexF3_S15_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/011412/SRR11412266/svRNA184-mock-3-indexF3_S15_L004_R1_001.fastq.gz
+cat svRNA184-mock-3-indexF3_S15_L* > svRNA184-mock-3-indexF3_S15.fastq.gz
+#mv svRNA184-mock-3-indexF3_S15_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412259/CoV002-CoV2-1-indexG4_S4_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412260/CoV002-CoV2-1-indexG4_S4_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412261/CoV002-CoV2-1-indexG4_S4_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412262/CoV002-CoV2-1-indexG4_S4_L004_R1_001.fastq.gz
+cat CoV002-CoV2-1-indexG4_S4_L* > CoV002-CoV2-1-indexG4_S4.fastq.gz
+#mv CoV002-CoV2-1-indexG4_S4_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412255/CoV002-CoV2-2-indexG5_S5_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412256/CoV002-CoV2-2-indexG5_S5_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412257/CoV002-CoV2-2-indexG5_S5_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412258/CoV002-CoV2-2-indexG5_S5_L004_R1_001.fastq.gz
+cat CoV002-CoV2-2-indexG5_S5_L* > CoV002-CoV2-2-indexG5_S5.fastq.gz
+#mv CoV002-CoV2-2-indexG5_S5_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412251/CoV002-CoV2-3-indexG6_S6_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRZ/011412/SRR11412252/CoV002-CoV2-3-indexG6_S6_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra58/SRZ/011412/SRR11412253/CoV002-CoV2-3-indexG6_S6_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412254/CoV002-CoV2-3-indexG6_S6_L004_R1_001.fastq.gz
+cat CoV002-CoV2-3-indexG6_S6_L* > CoV002-CoV2-3-indexG6_S6.fastq.gz
+#mv CoV002-CoV2-3-indexG6_S6_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412247/CoV002-mock1-indexG1_S1_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412248/CoV002-mock1-indexG1_S1_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412249/CoV002-mock1-indexG1_S1_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra58/SRZ/011412/SRR11412250/CoV002-mock1-indexG1_S1_L004_R1_001.fastq.gz
+cat CoV002-mock1-indexG1_S1_L* > CoV002-mock1-indexG1_S1.fastq.gz
+#mv CoV002-mock1-indexG1_S1_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412243/CoV002-mock2-indexG2_S2_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412244/CoV002-mock2-indexG2_S2_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412245/CoV002-mock2-indexG2_S2_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412246/CoV002-mock2-indexG2_S2_L004_R1_001.fastq.gz
+cat CoV002-mock2-indexG2_S2_L* > CoV002-mock2-indexG2_S2.fastq.gz
+#mv CoV002-mock2-indexG2_S2_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412239/CoV002-mock3-indexG3_S3_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra79/SRZ/011412/SRR11412240/CoV002-mock3-indexG3_S3_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412241/CoV002-mock3-indexG3_S3_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412242/CoV002-mock3-indexG3_S3_L004_R1_001.fastq.gz
+cat CoV002-mock3-indexG3_S3_L* > CoV002-mock3-indexG3_S3.fastq.gz
+#mv CoV002-mock3-indexG3_S3_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra73/SRZ/011412/SRR11412235/SARS004-CoV2-1_S4_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412236/SARS004-CoV2-1_S4_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra58/SRZ/011412/SRR11412237/SARS004-CoV2-1_S4_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412238/SARS004-CoV2-1_S4_L004_R1_001.fastq.gz
+cat SARS004-CoV2-1_S4_L* > SARS004-CoV2-1_S4.fastq.gz
+#mv SARS004-CoV2-1_S4_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412231/SARS004-CoV2-2_S5_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412232/SARS004-CoV2-2_S5_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412233/SARS004-CoV2-2_S5_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/011412/SRR11412234/SARS004-CoV2-2_S5_L004_R1_001.fastq.gz
+cat SARS004-CoV2-2_S5_L* > SARS004-CoV2-2_S5.fastq.gz
+#mv SARS004-CoV2-2_S5_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412227/SARS004-CoV2-3_S6_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412228/SARS004-CoV2-3_S6_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra49/SRZ/011412/SRR11412229/SARS004-CoV2-3_S6_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412230/SARS004-CoV2-3_S6_L004_R1_001.fastq.gz
+cat SARS004-CoV2-3_S6_L* > SARS004-CoV2-3_S6.fastq.gz
+#mv SARS004-CoV2-3_S6_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412223/SARS004-mock-1_S1_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412224/SARS004-mock-1_S1_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412225/SARS004-mock-1_S1_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412226/SARS004-mock-1_S1_L004_R1_001.fastq.gz
+cat SARS004-mock-1_S1_L* > SARS004-mock-1_S1.fastq.gz
+#mv SARS004-mock-1_S1_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412219/SARS004-mock-2_S2_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412220/SARS004-mock-2_S2_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412221/SARS004-mock-2_S2_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412222/SARS004-mock-2_S2_L004_R1_001.fastq.gz
+cat SARS004-mock-2_S2_L* > SARS004-mock-2_S2.fastq.gz
+#mv SARS004-mock-2_S2_L* tmp
+
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412215/SARS004-mock-3_S3_L001_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra61/SRZ/011412/SRR11412216/SARS004-mock-3_S3_L002_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra60/SRZ/011412/SRR11412217/SARS004-mock-3_S3_L003_R1_001.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra62/SRZ/011412/SRR11412218/SARS004-mock-3_S3_L004_R1_001.fastq.gz
+cat SARS004-mock-3_S3_L* > SARS004-mock-3_S3.fastq.gz
+#mv SARS004-mock-3_S3_L* tmp
+
+
