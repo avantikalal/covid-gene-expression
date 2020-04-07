@@ -39,10 +39,10 @@
 - TEtools (https://github.com/l-modolo/TEtools)[docker image](zavolab/tetools:1.0.0) **NB:** the command passed to Docker must specify python and the full path to the toolname, like so: `python3 /TEtools/TEcount.py`.
 - TEtranscripts (http://hammelllab.labsites.cshl.edu/software)[docker image](quay.io/biocontainers/tetranscripts:2.1.4--py_0)
 - LIONS (www.github.com/ababaian/LIONS)[docker image](hpobiolab/lions)
-- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/)[docker image](quay.io/biocontainers/picard:2.22.2--0)
-- featureCounts (http://subread.sourceforge.net)[docker image](hpobiolab/feature-counts)
-- MultiQC (https://github.com/ewels/MultiQC)[docker image](quay.io/biocontainers/multiqc:1.8--py_2)
-- KissSplice (http://kissplice.prabi.fr/)[docker image](hpobiolab/kiss-splice)
+- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/) [docker image](quay.io/biocontainers/picard:2.22.2--0)
+- featureCounts (http://subread.sourceforge.net) [docker image](hpobiolab/feature-counts)
+- MultiQC (https://github.com/ewels/MultiQC) [docker image](quay.io/biocontainers/multiqc:1.8--py_2)
+- KissSplice (http://kissplice.prabi.fr/) [docker image](hpobiolab/kiss-splice)
 
 ### R packages
 
