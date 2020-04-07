@@ -8,58 +8,58 @@ tags:
   - Preprint
   - replace with your own keyowrds
 authors:
-  - name: Leyla Garcia
-    orcid: 0000-0003-3986-0510
-    affiliation: 1,2
-  - name: Alexander Garcia
-    orcid: 0000-orcid
-    affiliation: 1,3
-  - name: Pjotr Prins
-    orcid: 0000-orcid
-    affiliation: 1,4
-  - name: Toshiaki Katayama
-    orcid: 0000-orcid
-    affiliation: 1,5    
+  - name:
+    orcid:
+    affiliation:
+  - name:
+    orcid:
+    affiliation:
+  - name:
+    orcid:
+    affiliation:
+  - name:
+    orcid:
+    affiliation:
 affiliations:
- - name: BioHackrXiv, http://biohackrxiv.org
+ - name: 
    index: 1
- - name: ZB MED Information centre for life sciences, Gleueler Str. 60, 50931 Cologne, Germany
+ - name: 
    index: 2
- - name: BASF
+ - name: 
    index: 3
- - name: The Bird
+ - name: 
    index: 4
- - name: Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, 178-4-4 Wakashiba, Kashiwa, Chiba 277-0871, Japan
+ - name: 
    index: 5
 date: 01 January 2020
 bibliography: paper.bib
 ---
 
-# Introduction or Background
+# Introduction
 
-BioHackrXiv is a preprint to report on works done during BioHackathons, CodeFests, Sprints or similar events and related to Life Sciences and Health Care domains. Articles in BioHackrXiv commonly report on-going work as a couple of days of hacking are commonly not enough to get the things fully done. However, hackathon reports should still show work that people can build upon.
+As part of the virtual BioHackathon 2020, we formed a working group that focused on the analysis of gene expression in the context of COVID-19. More specifically, we performed transcriptome analyses on published datasets in order to better understand the interaction between human host and virus.
 
-One of the reasons behind BioHackathons and similar is sharing: ideas, data, designs, software, documentations and tutorials among others. We therefore kindly ask you to use CC-BY 4.0 license for your work [@CCBY4].  We also encourage you to share your code on GitHub, with an open license whenever possible.
+The ideas proposed during this hackathon where divided into five projects:
+
+1. SARS-CoV-2 infection global analyses, which dealt with global gene expression, functional and regulation of gene expression analyses.
+2. Human-virus interaction analyses, which aimed to pinpoint RNA-binding proteins that might be key in the interaction between human and SARS-CoV-2.
+3. Increased risk factors analyses, which investigated gene expression in other datasets with the goal of identifying commonalities and differences with previous analyses, focusing on specific genes.
+4. Subtyping of expression response to drugs after COVID infection, which focused on trying to search for potential drugs that could impact in important genes for the interaction of human and virus.
+5. Reporting findings to electronic medical records, which was conceived to determine how to bring the results obtained to clinical practice.
 
 The people behind BioHackrXiv has participated on multiple BioHackathons organized by National Bioscience Database Center (NBDC) / Database Center for Life Science (DBCLS) in Japan and ELIXIR Europe. We decided to create BioHackrXiv preprint in order to make it easier for all to share and report on the work done at this sort of events. Of course, any hacking event is welcome to publish here, the more the merrier they say! And, if you want to go for a more formal peer-reviewed publication, you can always do so once your work is more mature [@Katayamaetal-2010].
 
-Add to this section a couple of paragraphs introducing the work done where you (partially) develop the work you are reporting here. 
+## Level 2
 
-Please separate paragraphs with a double line.
-
-## Subsection level 2
-
-Please keep sections to a maximum of three levels, even better if only two levels.
+Text
 
 ### Subsection level 3
 
 Please keep sections to a maximum of three levels.
 
-## Where to find templates to submit to BioHackrXiv
+## Background
 
-Our Word template is loosely inspired on the Lecture Notes in Computer Science (LNCS) templates [@LNCStemplate]. We have also looked at the Journal of Open Source Software submission process [@JOSS17]; in particular, we offer a PDF generation from Markdown based on theirs. 
-
-We provide a Word template and a Markdown template on our GitHub repository <TODO link to GitHub repo>. If you use the Word template, please export it or print it as PDF. If you use the Markdown template, you should use the generator tool [@generator]. Please have a look to the instructions page for BioHackrXiv [@prins2020].  
+Biological background [@prins2020].  
 
 
 ## Tables, figures and so on
@@ -90,7 +90,7 @@ And maybe you want to add a sentence or two on how you plan to continue. Please 
 
 For citations of references, we prefer the use of parenthesis, last name and year. If you use a citation manager, Elsevier – Harvard or American Psychological Association (APA) will work. If you are referencing web pages, software or so, please do so in the same way. Whenever possible, add authors and year. We have included a couple of citations along this document for you to get the idea. Please remember to always add DOI whenever available, if not possible, please provide alternative URLs. You will end up with an alphabetical order list by authors’ last name.
 
-# Jupyter notebooks, GitHub repositories and data repositories
+# GitHub repositories and docker images
 
 * Please add a list here
 * Make sure you let us know which of these correspond to Jupyter notebooks. Although not supported yet, we plan to add features for them
