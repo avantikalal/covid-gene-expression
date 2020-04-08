@@ -91,8 +91,10 @@ sites = merge(sites, rbp_pwm, by="Matrix_id")
 
 # Find duplicate binding sites for the same protein and choose the one with the highest score
 print("Removing duplicate sites")
+initial_n = nrow(sites)
 sites = sites[sites[, .I[score == max(score)], by=.(start, end, strand, Gene_name)]$V1]
 sites = sites[!duplicated(sites[, .(start, end, strand, Gene_name)]),]
+print(paste0("Reduced number of sites from ", initial_n, " to ", nrow(sites)))
 
 # sort by position
 print("sorting sites")
