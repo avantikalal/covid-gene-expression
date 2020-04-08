@@ -7,8 +7,9 @@ setwd("proj_2_rbp_data")
 
 # List input data files
 
-## NCBI # This file is the reference genome for SARS-CoV-2. It was downloaded from https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.
+## NCBI # Downloaded from https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.
 ref_file="reference/sequence.fasta.txt"
+gff_file = "ncbi/ref/GCF_009858895.2_ASM985889v3_genomic.gff"
 
 ## ATtRACT # Downloaded from https://attract.cnic.es/download
 rbp_file = "ATtRACT/ATtRACT_db.txt"
@@ -21,47 +22,28 @@ library(data.table)
 library(seqinr)
 library(Biostrings)
 library(TFBSTools)
+library(foreach)
+library(doParallel)
+library(rtracklayer)
+source("covid-gene-expression/project/human-RBP-analysis/rbp_functions.R")
+
+registerDoParallel(detectCores())
 
 ################################################
-
-# Define functions
-
-# Function to read PWMs
-readPWMsFromFasta = function (pwm_file) {
-  # Read all lines from PWM file
-  lines = readLines(pwm_file)
-  # Find header lines, start and end of each PWM
-  ind = which(substr(lines, 1L, 1L) == ">")
-  nseq = length(ind)
-  start = ind + 1
-  end = ind - 1
-  end = c(end[-1], length(lines))
-  # Split PWMs
-  pwms = lapply(seq_len(nseq), function(i) strsplit(lines[start[i]:end[i]], "\t"))
-  # Format as numeric matrix
-  pwms = lapply(pwms, function(x) matrix(as.numeric(unlist(x)), ncol=4, byrow=T))
-  # Name with PWM ID
-  names(pwms) = lapply(seq_len(nseq), function(i) {
-    firstword <- strsplit(lines[ind[i]], "\t")[[1]][1]
-    substr(firstword, 2, nchar(firstword))
-  })
-  return(pwms)
-}
-
-##############################################
 
 # Read input data
 
 # Reference genome
-ref = read.fasta(ref_file, as.string = T, forceDNAtolower = F)
-refString = DNAString(ref[[1]][[1]])
-#refString = RNAString(gsub("T", "U", ref[[1]][[1]]))
+ref = readFasta(ref_file)
 
 # RBPs
 rbp = fread(rbp_file)
 
 # PWMs
 pwm = readPWMsFromFasta(pwm_file)
+
+# GFF
+gff = readGFF("ncbi/ref/GCF_009858895.2_ASM985889v3_genomic.gff")
 
 ##############################################
 
@@ -89,26 +71,10 @@ rbp_pwm[, .N, by=Gene_name][order(N, decreasing = T),]
 pwm = pwm[names(pwm) %in% rbp_pwm[, Matrix_id]]
 
 # Scan the genome with these PWMs
-sites = list()
-for(i in 1:length(pwm)){
-  # Read PWM ID
-  id = as.character(names(pwm)[i])
-  # Save PWM as PWMatrix class
-  curr_pwm = PWMatrix(profileMatrix=matrix(c(pwm[[i]]), byrow=TRUE, nrow=4, dimnames=list(c("A", "C", "G", "T"))), ID=id, name="Unknown")
-  # Scan genome
-  curr_sites = searchSeq(curr_pwm, refString, min.score="95%", strand="*", seqname = names(ref))
-  if(length(curr_sites) > 0){
-    # Save in list
-    curr_sites = as.data.table(writeGFF3(curr_sites))
-    curr_sites[, seq:= curr_sites[, tstrsplit(attributes, split=";|=", perl=T)][, V6]]
-    curr_sites[, Matrix_id:= id]
-    sites[[id]] = curr_sites 
-  }
-}
-sites = rbindlist(sites)
+sites = ScanGenomeWithPWMs(refString, names(ref), pwm)
 
 ##############################################
-# Match protein name
+# Match binding sites with protein name
 sites = merge(sites, rbp_pwm, by="Matrix_id")
 
 # Find duplicate binding sites for the same protein and choose the one with the highest score
@@ -126,5 +92,15 @@ save(sites, file="output/sites.RData")
 
 ##############################################
 
+# Annotate sites
 
+sites_ranges = GRanges(sites)
+site_overlaps = findOverlaps(sites_ranges, gff, ignore.strand=F, type="any")
+
+annotated_sites = sites_ranges[queryHits(hits)]
+annotated_sites$type = gff$type[subjectHits(hits)]
+annotated_sites$gene = gff$gene[subjectHits(hits)]
+
+# Save sites
+save(annotated_sites, file="output/annotated_sites.RData")
 
