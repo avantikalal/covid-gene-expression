@@ -54,6 +54,18 @@ Docker image: `hpobiolab/gene-expression-r`
 install.packages("ggplot2")
 ```
 
+#### Direct install
+   _gplots_
+```
+install.packages("gplots")
+```
+
+#### Direct install
+   _tidyverse_
+```
+install.packages("tidyverse")
+```
+
 #### BiocManager install
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
