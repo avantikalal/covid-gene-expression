@@ -49,7 +49,5 @@ Running all the scripts in order produces the following output files:
 A docker file with all of the R dependencies is available at [hpobiolab/rbp-pwm-r](https://hub.docker.com/orgs/hpobiolab/repositories)
 
 ## Data and results
-All input data and results are at the following path:
-```
-
-```
+Input data (ATtRACT db and reference genome) can be found at `/home/shared/proj_2_rbp_data`.
+Current output files (the 5 files listed above) can be found at `/home/shared/proj_2_rbp_output`
