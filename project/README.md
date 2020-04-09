@@ -10,7 +10,7 @@
 ## 2. [Human-virus interaction analyses](human-RBP-analysis):
 * Which human mRNAs and proteins interact with or are regulating the virus?
 
-## 3. Increased risk factors analyses:
+## 3. [Increased risk factors analyses](risk_factors):
 * Select datasets from co-morbidities related to severeness of Covid-19
 For instance, diseases such as diabetes myelitus and hypertension; other factors like smoking, which might make the person more vulnerable to the virus;
 * Select other human tissues to check the expression of proteins interacting with the virus (selected in previous step)
