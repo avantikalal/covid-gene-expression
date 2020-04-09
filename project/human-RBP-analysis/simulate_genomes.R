@@ -26,12 +26,13 @@ gff = readGFF("reference/GCF_009858895.2_ASM985889v3_genomic.gff")
 
 # Create simulated genomes
 print("Simulating 1000 genomes")
-freqs = alphabetFrequency(ref)[1:4]
+freqs = alphabetFrequency(ref[[1]])[1:4]
 sim_genomes = simulateSeq(freqs, 1000)
+print(sim_genomes)
 
 #Save
 print("Saving simulated genomes")
-save(sim_genomes, file="sim_genomes.RData")
+save(sim_genomes, file="output/sim_genomes.RData")
 
 ######################
 
@@ -46,9 +47,10 @@ t_utr_seq = ref[[1]][start(t_utr_range):end(t_utr_range)]
 print("Simulating 1000 3'UTRs")
 freqs = alphabetFrequency(t_utr_seq)[1:4]
 sim_t_utrs = simulateSeq(freqs, 1000)
+print(sim_t_utrs)
 
 print("Saving simulated 3'UTRs")
-save(sim_t_utrs, file="sim_t_utrs.RData")
+save(sim_t_utrs, file="output/sim_t_utrs.RData")
 
 ######################
 
@@ -63,6 +65,7 @@ f_utr_seq = ref[[1]][start(f_utr_range):end(f_utr_range)]
 print("Simulating 1000 5'UTRs")
 freqs = alphabetFrequency(f_utr_seq)[1:4]
 sim_f_utrs = simulateSeq(freqs, 1000)
+print(sim_f_utrs)
 
 print("Saving simulated 5'UTRs")
-save(sim_f_utrs, file="sim_f_utrs.RData")
+save(sim_f_utrs, file="output/sim_f_utrs.RData")

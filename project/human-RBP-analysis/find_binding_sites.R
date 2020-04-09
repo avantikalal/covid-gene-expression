@@ -65,7 +65,7 @@ print(rbp[, length(unique(Gene_name))])
 
 # Select unique RBP-PWM mappings
 print("Mapping RBPs to PWMs")
-print(rbp_pwm = unique(rbp[, .(Gene_name, Matrix_id)]))
+rbp_pwm = unique(rbp[, .(Gene_name, Matrix_id)])
 
 # How many proteins have multiple PWMs?
 print("Number of PWMs per protein")
@@ -75,13 +75,13 @@ print(rbp_pwm[, .N, by=Gene_name][order(N, decreasing = T),])
 
 # Select PWMs that match these RBPs
 print("Selecting PWMs that match to human RBPs")
-initial_n = nrow(pwm)
+initial_n = length(pwm)
 pwm = pwm[names(pwm) %in% rbp_pwm[, Matrix_id]]
-print(paste0("Reduced number of PWMs from ", initial_n, " to ", nrow(pwm)))
+print(paste0("Reduced number of PWMs from ", initial_n, " to ", length(pwm)))
 
 # Scan the genome with these PWMs
 print("Scanning the reference genome for PWMs")
-sites = ScanGenomeWithPWMs(refString, names(ref), pwm)
+sites = ScanSeqWithPWMs(ref[[1]], pwm, names(ref))
 print(paste0("Found ", nrow(sites), " sites."))
 
 ##############################################

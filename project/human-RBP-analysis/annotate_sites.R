@@ -38,9 +38,9 @@ sites_ranges = GRanges(sites)
 site_overlaps = findOverlaps(sites_ranges, gff, ignore.strand=F, type="any")
 
 print("Annotating sites")
-annotated_sites = sites_ranges[queryHits(hits)]
-annotated_sites$type = gff$type[subjectHits(hits)]
-annotated_sites$gene = gff$gene[subjectHits(hits)]
+annotated_sites = sites_ranges[queryHits(site_overlaps)]
+annotated_sites$type = gff$type[subjectHits(site_overlaps)]
+annotated_sites$gene = gff$gene[subjectHits(site_overlaps)]
 
 # Save sites
 print("Saving annotated sites")

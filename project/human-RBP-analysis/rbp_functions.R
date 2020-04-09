@@ -101,3 +101,37 @@ simulateSeq = function(freqs, N){
   names(sim_genomes) = paste0("sim", 1:N)
   return(sim_genomes)
 }
+
+
+# Enrichment test for RBP
+enrich_rbps_real=function(real_sites, sim_sites, num=1000){
+  
+  print("Counting real binding sites per protein per strand")
+  site_count = real_sites[, .N, by=.(Gene_name, strand)]
+  
+  print("Counting binding sites per protein per strand, on the simulated sequence")
+  sim_site_count = sim_sites[, .N, by=.(seqname, Gene_name, strand)]
+  sim_site_count = dcast(sim_site_count, seqname+strand~Gene_name, value.var = "N", fill=0)
+  sim_site_count = melt(sim_site_count, id.vars=1:2, variable.name = "Gene_name", value.name = "N")
+  sim_site_count = sim_site_count[, .(mean_count=mean(N), sd_count=sd(N)), by=.(Gene_name, strand)]
+  
+  print("Comparing binding site counts")
+  site_count = merge(site_count, sim_site_count, by = c("Gene_name", "strand"))
+  
+  # Calculate z-score
+  print("Calculating z-scores")
+  site_count[, z:=(N-mean_count)/sd_count]
+  site_count[, pval:=pnorm(-z)]
+  
+  # Multiple hypothesis correction
+  print("FDR correction")
+  site_count[, qval:=p.adjust(pval, "fdr"), by=strand]
+  
+  return(site_count)
+}
+
+
+
+
+
+
