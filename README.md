@@ -1,4 +1,4 @@
-# Covid-19 Gene Expression Work Group (Private project)
+# Covid-19 Gene Expression Working Group (Private project)
 Hackathon team: gene expression analysis for Covid-19 Virtual Biohackathon (vBH)
 
 ### Link to vBH Github
