@@ -3,99 +3,109 @@
 ### Modify this section for your local environment!!### 
 
 # Set working directory
-setwd("~/ngc-workspaces/mnt-covid-omics/")
+setwd("/covid-omics")
 
 # List input data files
 
-## RBPDB
-exp_table = "rbpdb/RBPDB_v1.3.1_experiments_human_2012-11-21.tdt"
-protexp_table = "rbpdb/RBPDB_v1.3.1_protExp_human_2012-11-21.tdt"
-prot_table = "rbpdb/RBPDB_v1.3.1_proteins_human_2012-11-21.tdt"
-## The above three files were downloaded from http://rbpdb.ccbr.utoronto.ca/downloads/RBPDB_v1.3.1_human_2012-11-21_TDT.zip. Unzip the downloaded directory to get the tables.
-pwm_dir = "rbpdb/matrices_human/PWMDir"
-# The pwm_dir contains PWM files downloaded from http://rbpdb.ccbr.utoronto.ca/downloads/matrices_human.zip.
+## NCBI # Downloaded from https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.
+ref_file="reference/sequence.fasta.txt"
 
-## NCBI
-ref_file="ncbi/ref/sequence.fasta.txt"
-# This file is the reference genome for SARS-CoV-2. It was downloaded from https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.
+## ATtRACT # Downloaded from https://attract.cnic.es/download
+rbp_file = "ATtRACT/ATtRACT_db.txt"
+pwm_file = "ATtRACT/pwm.txt"
 
 ################################################
 
 # Import requirements
 library(data.table)
-library(TFBSTools)
 library(seqinr)
 library(Biostrings)
+library(TFBSTools)
+library(foreach)
+library(doParallel)
+source("covid-gene-expression/project/human-RBP-analysis/rbp_functions.R")
 
-# Define functions
+registerDoParallel(detectCores())
 
-# Funation to load PWMs
-loadPWM = function(PWMfile, id, name){
-  mat=as.matrix(read.table(PWMfile))
-  pwm = PWMatrix(profileMatrix=matrix(c(mat), byrow=TRUE, nrow=4, dimnames=list(c("A", "C", "G", "T"))), ID=as.character(id), name=name)
-  return(pwm)
-}
+################################################
 
-# Function to scan sequence with PWM
-scanGenome = function(ref_file, pwm, expID, protID, min.score="80%", strand="*"){
-  # Read the genome sequence from FASTA file
-  ref = read.fasta(ref_file, as.string = T, forceDNAtolower = F)
-  refString=DNAString(ref[[1]][[1]])
-  # Search the genome with the given PWM
-  siteset = searchSeq(pwm, refString, min.score=min.score, strand=strand, seqname = names(ref))
-  # Format the results as a table
-  siteset = as.data.table(writeGFF3(siteset))
-  # Add attributes to the table
-  siteset_attributes = siteset[, tstrsplit(attributes, split=";|=", perl=T)]
-  siteset[, tf:= siteset_attributes[, V2]]
-  siteset[, seq:= siteset_attributes[, V6]]
-  # Add experiment and protein IDs to the table
-  siteset[, expID:= expID] 
-  siteset[, protID:= protID] 
-  return(siteset)
-}
+# Read input data
 
-# Load tables from RBPDB
-exp = fread(exp_table, header=F, col.names = c("id", "pmID", "exptype", "notes", "sequence_motif", "SELEX_file", 
-                                               "aligned_SELEX_file", "aligned_motif_file", "PWM_file", "PFM_file", 
-                                               "logo_file", "invivo_notes", "invivo_file", "secondary_structure", "flag"),
-            na.strings = "\\N")
-protexp = fread(protexp_table, header=F, col.names = c("protID", "expID", "homolog", "id"), na.strings = "\\N")
-prot = fread(prot_table, header=F, col.names = c("id", "annotID", "createDate", "updateDate", "geneName", "geneDesc", 
-                                                 "species", "taxID", "domains", "aliases", "flag", "flagNote", "PDBIDs"), 
-             na.strings = "\\N")
+# Reference genome
+print("Reading reference genome")
+ref = readFasta(ref_file)
 
-# Select only the experiments for which PWM files are available
-exp_with_pwm = exp[!is.na(PWM_file)]
+# RBPs
+print("Reading RBPs")
+rbp = fread(rbp_file)
 
-# What types of experiments are these?
-exp_with_pwm[, .N, by=exptype]
+# PWMs
+print("Reading PWMs")
+pwm = readPWMsFromFasta(pwm_file)
 
-# Match these experiment to their protein IDs
-exp_with_pwm = merge(exp_with_pwm, protexp, by.x="id", by.y="expID", all.x=T)
+##############################################
 
-# Match these experiment to their protein names and other protein information
-exp_with_pwm = merge(exp_with_pwm, prot, by.x="protID", by.y="id", all.x=T)
+# Select only human RBPs
+print("Filtering human RBPs")
+initial_n = nrow(rbp)
+rbp = rbp[Organism == "Homo_sapiens",]
+print(paste0("Reduced number of RBPs from ", initial_n, " to ", nrow(rbp)))
 
-# For each experiment, load the matched PWM file
-pwms = list()
-for(i in 1:nrow(exp_with_pwm)){
-  path_to_pwm_file = paste0(pwm_dir, "/", exp_with_pwm[i, PWM_file])
-  expID = exp_with_pwm[i, id]
-  protName = exp_with_pwm[i, geneName]
-  pwms[[i]] = loadPWM(PWMfile = path_to_pwm_file, id = expID, name = protName)
-}
+# See experiment types
+print("Types of experiments")
+print(rbp[, .N, by=Experiment_description][order(N, decreasing = T),])
 
-# Scan the virus genome with each PWM to identify RBP-binding sites on the viral genome
-sitesets = list()
-for(i in 1:nrow(exp_with_pwm)){
-  pwm = pwms[[i]]
-  expID = exp_with_pwm[i, id]
-  protID = exp_with_pwm[i, protID]
-  sitesets[[i]] = scanGenome(ref_file = ref_file, pwm = pwm, expID=expID, protID=protID)
-}
-sitesets = rbindlist(sitesets)
+# See source databases
+print("Source databases")
+print(rbp[, .N, by=Database][order(N, decreasing = T),])
 
-# Save sitesets
-save(sitesets, file="sitesets.RData")
+# How many unique proteins are present?
+print("Number of unique human RBPs")
+print(rbp[, length(unique(Gene_name))])
+
+# Select unique RBP-PWM mappings
+print("Mapping RBPs to PWMs")
+rbp_pwm = unique(rbp[, .(Gene_name, Matrix_id)])
+
+# How many proteins have multiple PWMs?
+print("Number of PWMs per protein")
+print(rbp_pwm[, .N, by=Gene_name][order(N, decreasing = T),])
+
+##############################################
+
+# Select PWMs that match these RBPs
+print("Selecting PWMs that match to human RBPs")
+initial_n = length(pwm)
+pwm = pwm[names(pwm) %in% rbp_pwm[, Matrix_id]]
+print(paste0("Reduced number of PWMs from ", initial_n, " to ", length(pwm)))
+
+# Scan the genome with these PWMs
+print("Scanning the reference genome for PWMs")
+sites = ScanSeqWithPWMs(ref[[1]], pwm, names(ref))
+print(paste0("Found ", nrow(sites), " sites."))
+
+##############################################
+# Match binding sites with protein name
+print("Matching sites to RBPs")
+sites = merge(sites, rbp_pwm, by="Matrix_id")
+
+# Find duplicate binding sites for the same protein and choose the one with the highest score
+print("Removing duplicate sites")
+initial_n = nrow(sites)
+sites = sites[sites[, .I[score == max(score)], by=.(start, end, strand, Gene_name)]$V1]
+sites = sites[!duplicated(sites[, .(start, end, strand, Gene_name)]),]
+print(paste0("Reduced number of sites from ", initial_n, " to ", nrow(sites)))
+
+# sort by position
+print("sorting sites")
+sites = sites[order(start),]
+
+# Add site length
+print("adding site length")
+sites[, len:=nchar(seq)]
+
+# Save sites
+print("saving sites")
+save(sites, file="output/sites.RData")
+
 
