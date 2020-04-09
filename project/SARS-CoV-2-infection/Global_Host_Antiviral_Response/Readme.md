@@ -1,4 +1,5 @@
 # Project 1: Global Host Antiviral Response
+    -A separate workflow to enable future comparisons of results.
 
 ## Software
 1. Data acquisition:
