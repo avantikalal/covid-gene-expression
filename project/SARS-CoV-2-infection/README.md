@@ -27,6 +27,7 @@
     - counts_p3.sh
     - DE_prep.sh
     - prepDE.py (auxiliary, from the creators of StringTie)
+    - COVID19_DEA.R
 
 ## Software used in this project
 ### Command line tools
