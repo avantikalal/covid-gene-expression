@@ -37,13 +37,13 @@ The R scripts for this folder use the following libraries:
 Running all the scripts in order produces the following output files:
 
 ### Predicted binding sites
-1. `sites.RData`:
-2. `annotated_sites.RData`:
+1. `sites.RData`: Predicted binding sites on the SARS-CoV-2 genome
+2. `annotated_sites.RData`: Predicted binding sites on the SARS-CoV-2 genome, annotated with genetic element (UTR, gene)
 
 ### Enrichment files
-1. `site_count.RData`:
-2. `f_utr_site_count.RData`:
-3. `t_utr_site_count.RData`:
+1. `site_count.RData`: counts and p-values for RBP binding to the SARS-CoV-2 genome
+2. `f_utr_site_count.RData`: counts and p-values for RBP binding to the SARS-CoV-2 genome 5'UTR
+3. `t_utr_site_count.RData`: counts and p-values for RBP binding to the SARS-CoV-2 genome 3'UTR
 
 ### Dockerfile
 A docker file with all of the R dependencies is available at [hpobiolab/rbp-pwm-r](https://hub.docker.com/orgs/hpobiolab/repositories)
