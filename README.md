@@ -1,9 +1,9 @@
-# Covid-19 Gene Expression Working Group (Private project)
+# Covid-19 Gene Expression Working Group
 Hackathon team: gene expression analysis for Covid-19 Virtual Biohackathon (vBH)
 
 ### Link to vBH Github
 https://github.com/virtual-biohackathons/covid-19-bh20
-### Official Gene Expression Work Group Page (Public page)
+### Official Gene Expression Work Group Page
 https://github.com/virtual-biohackathons/covid-19-bh20/wiki/GeneExpression
 
 ## Main Objective
