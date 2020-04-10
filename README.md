@@ -11,7 +11,7 @@ As part of the virtual BioHackathon 2020, we formed a working group that focused
 
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/mariferrarini-patch-11/Diagram_projects.png" width="800">
-  <figcaption>Fig. 1. Project structure and interaction. Project 1 and 2 along with literature research will provide a list of candidate genes for Project 3 and 4 that will take into account external factors (comorbidities, and potential drug treatments). Project 5 will implement the findings into electronic medical records. Finally, Project 6 allows the efforts of all of the previous projects to be clearly detailed into workflows for increased reproducibility.</figcaption>
+  <figcaption>Fig. 1. Project structure and interaction. Projects 1 and 2 along with literature research will provide a list of candidate genes for Project 3 and 4 that will take into account external factors (comorbidities, and potential drug treatments). Project 5 will implement the findings into electronic medical records. Finally, Project 6 allows the efforts of all of the previous projects to be clearly detailed into workflows for increased reproducibility.</figcaption>
 </figure>
 
 ## Deliverables
