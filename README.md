@@ -22,13 +22,17 @@ _Methodological:_ Create a packaged reproducible pipeline in Docker to help scie
 ## Projects
 The ideas proposed during this hackathon were divided into six projects (Fig. 1):
 
-SARS-CoV-2 infection global analyses: Understanding how global gene expression in human cells responds to infection by the SARS-CoV-2 virus, including changes in gene regulatory networks.
-Human-virus interaction analyses: Identification of human RNA-binding proteins that might be key in the interaction between human cells and the RNA genome of SARS-CoV-2.
-Increased risk factors analyses: Investigating gene expression in other datasets with the goal of identifying commonalities and differences with the two previous analyses, focusing on specific genes.
-Subtyping of expression response to drugs after COVID infection: Searching for potential drugs that could impact the expression of human genes that are important for the interaction of human and virus.
-Reporting findings to electronic medical records: Determining how to bring the results obtained from the previous analyses to clinical practice.
-Workflows for reproducibility of analysis: Packaging the workflows devised within the Gene Expression group to enable seamless integration and approach reproducibility. 
+1. SARS-CoV-2 infection global analyses: Understanding how global gene expression in human cells responds to infection by the SARS-CoV-2 virus, including changes in gene regulatory networks.
 
+2. Human-virus interaction analyses: Identification of human RNA-binding proteins that might be key in the interaction between human cells and the RNA genome of SARS-CoV-2.
+
+3. Increased risk factors analyses: Investigating gene expression in other datasets with the goal of identifying commonalities and differences with the two previous analyses, focusing on specific genes.
+
+4. Subtyping of expression response to drugs after COVID infection: Searching for potential drugs that could impact the expression of human genes that are important for the interaction of human and virus.
+
+5. Reporting findings to electronic medical records: Determining how to bring the results obtained from the previous analyses to clinical practice.
+
+6. Workflows for reproducibility of analysis: Packaging the workflows devised within the Gene Expression group to enable seamless integration and approach reproducibility. 
 
 Please see the [project](project) folder for details on each individual project.
 
