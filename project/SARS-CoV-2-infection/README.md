@@ -27,6 +27,7 @@
     - counts_p3.sh
     - DE_prep.sh
     - prepDE.py (auxiliary, from the creators of StringTie)
+    - COVID19_DEA.R
 
 ## Software used in this project
 ### Command line tools
@@ -52,6 +53,18 @@ Docker image: `hpobiolab/gene-expression-r`
    _ggplot2_
 ```
 install.packages("ggplot2")
+```
+
+#### Direct install
+   _gplots_
+```
+install.packages("gplots")
+```
+
+#### Direct install
+   _tidyverse_
+```
+install.packages("tidyverse")
 ```
 
 #### BiocManager install
