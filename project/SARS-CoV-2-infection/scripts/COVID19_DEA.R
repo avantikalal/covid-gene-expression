@@ -191,11 +191,13 @@ library(limma)
 library(tidyverse)
 
 
-path_ensembl_annotation = 'ensembl_annotaton.tsv'
-path_read_count = 'gene_count_matrix.csv'
-path_metadata = 'metadata.txt'
+path_ensembl_annotation = '../data/ensembl_annotation.tsv'
+path_metadata = '../data/metadata.txt'
 
-ensembl_annotation_df <- read_csv('ensembl_annotaton.tsv') %>% column_to_rownames(var = 'gene_id')
+# The matrix is on the VM for now. When it will be shared through other means, it will be specified the directory where take it
+path_read_count = 'gene_count_matrix.csv'
+
+ensembl_annotation_df <- read_csv(path_ensembl_annotation) %>% column_to_rownames(var = 'gene_id')
 
 read_counts_df <- read_csv(file = path_read_count) %>%
   column_to_rownames(var = 'gene_id')
