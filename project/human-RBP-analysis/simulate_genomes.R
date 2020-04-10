@@ -2,6 +2,8 @@
 
 ### Modify this section for your local environment!!### 
 
+n_sims = 5000
+
 # Set working directory
 setwd("/covid-omics")
 
@@ -22,12 +24,12 @@ gff = readGFF("reference/GCF_009858895.2_ASM985889v3_genomic.gff")
 
 ######################
 
-# Simulate 1000 whole genomes
+# Simulate whole genomes
 
 # Create simulated genomes
-print("Simulating 1000 genomes")
+print(paste0("Simulating ", n_sims, " genomes"))
 freqs = alphabetFrequency(ref[[1]])[1:4]
-sim_genomes = simulateSeq(freqs, 1000)
+sim_genomes = simulateSeq(freqs, n_sims)
 print(sim_genomes)
 
 #Save
@@ -44,9 +46,9 @@ t_utr_range = ranges(gff[gff$gbkey=="3'UTR"])
 t_utr_seq = ref[[1]][start(t_utr_range):end(t_utr_range)]
 
 # Create simulated 3'UTRs
-print("Simulating 1000 3'UTRs")
+print(paste0("Simulating ", n_sims, " 3'UTRs"))
 freqs = alphabetFrequency(t_utr_seq)[1:4]
-sim_t_utrs = simulateSeq(freqs, 1000)
+sim_t_utrs = simulateSeq(freqs, n_sims)
 print(sim_t_utrs)
 
 print("Saving simulated 3'UTRs")
@@ -62,9 +64,9 @@ f_utr_range = ranges(gff[gff$gbkey=="5'UTR"])
 f_utr_seq = ref[[1]][start(f_utr_range):end(f_utr_range)]
 
 # Create simulated 3'UTRs
-print("Simulating 1000 5'UTRs")
+print(paste0("Simulating ", n_sims, " 5'UTRs"))
 freqs = alphabetFrequency(f_utr_seq)[1:4]
-sim_f_utrs = simulateSeq(freqs, 1000)
+sim_f_utrs = simulateSeq(freqs, n_sims)
 print(sim_f_utrs)
 
 print("Saving simulated 5'UTRs")

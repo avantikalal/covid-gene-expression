@@ -37,7 +37,7 @@ load("output/filtered_rbp.RData")
 
 # PWMs
 print("Reading filtered PWMs")
-pwm = load("output/filtered_pwm.RData")
+load("output/filtered_pwm.RData")
 
 ##############################################
 

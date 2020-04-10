@@ -112,7 +112,7 @@ simulateSeq = function(freqs, N){
 
 
 # Enrichment test for RBP
-enrich_rbps_real=function(real_sites, sim_sites, num=1000){
+enrich_rbps_real=function(real_sites, sim_sites){
   
   print("Counting real binding sites per protein per strand")
   site_count = real_sites[, .N, by=.(Gene_name, strand)]

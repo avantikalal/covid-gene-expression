@@ -44,6 +44,7 @@ print(paste0("Reduced number of RBPs from ", initial_n, " to ", rbp[, length(uni
 # Remove PWMs which consist of only a single motif
 initial_n = rbp[, length(unique(Gene_name))]
 rbp = rbp[Score!="1.000000**",]
+rbp = unique(rbp[, Score:=NULL])
 print(paste0("Reduced number of RBPs from ", initial_n, " to ", rbp[, length(unique(Gene_name))]))
 
 # See experiment types
@@ -79,9 +80,12 @@ print(paste0("Reduced number of PWMs from ", initial_n, " to ", length(pwm)))
 # Filter the RBPs corresponding to these PWMs
 print("Filtering RBP-PWM matches after removing high-entropy PWMs")
 initial_n = rbp[, length(unique(Gene_name))]
-print(paste0("Reduced number of RBPs in the search from ", initial_n, " to ", rbp[Matrix_id %in% names(pwm), length(unique(Gene_name))]))
+rbp = rbp[Matrix_id %in% names(pwm),]
+print(paste0("Reduced number of RBPs in the search from ", initial_n, " to ", rbp[, length(unique(Gene_name))]))
 
 # Save filtered data
+print("Saving filtered RBP table")
 save(rbp, file="output/filtered_rbp.RData")
+print("Saving filtered PWMs")
 save(pwm, file="output/filtered_pwm.RData")
 

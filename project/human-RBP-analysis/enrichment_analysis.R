@@ -26,13 +26,7 @@ load("output/sim_t_utr_sites_raw.RData")
 
 # RBPs
 print("Loading RBPs")
-rbp = fread("ATtRACT/ATtRACT_db.txt")
-
-# Select only human RBPs
-print("Filtering human RBPs")
-initial_n = nrow(rbp)
-rbp = rbp[Organism == "Homo_sapiens",]
-print(paste0("Reduced number of RBPs from ", initial_n, " to ", nrow(rbp)))
+load("output/filtered_rbp.RData")
 
 # Select unique RBP-PWM mappings
 print("Mapping RBPs to PWMs")
