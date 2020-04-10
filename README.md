@@ -36,6 +36,10 @@ The ideas proposed during this hackathon were divided into six projects (Fig. 1)
 
 Please see the [project](project) folder for details on each individual project.
 
+## Contributors
+See the [contributors table](contributors.md) for a full list of the amazing people who have 
+contributed to the project.
+
 ## Progress tracking
 We are tracking progress on project-specific boards here: https://github.com/avantikalal/covid-gene-expression/projects
 
