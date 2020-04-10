@@ -195,7 +195,7 @@ path_ensembl_annotation = 'ensembl_annotaton.tsv'
 path_read_count = 'gene_count_matrix.csv'
 path_metadata = 'metadata.txt'
 
-ensembl_annotation_df <- read_csv('ensembl_annotaton.tsv') %>% column_to_rownames(var = 'gene_id')
+ensembl_annotation_df <- read_csv(path_ensembl_annotation) %>% column_to_rownames(var = 'gene_id')
 
 read_counts_df <- read_csv(file = path_read_count) %>%
   column_to_rownames(var = 'gene_id')
