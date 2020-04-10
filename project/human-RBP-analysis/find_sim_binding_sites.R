@@ -35,19 +35,19 @@ pwm = readPWMsFromFasta("ATtRACT/pwm.txt")
 
 # Scan simulated genomes
 
-# # List candidate pwms - PWMs whose binding sites were found
-# print("Filtering PWMs that were found in the genome")
-# cand_pwm = pwm[names(pwm) %in% sites[, Matrix_id]]
-# print(paste0("Reduced number of PWMs from ", length(pwm), " to ", length(cand_pwm)))
-# 
-# # Scan the simulated genomes with these PWMs
-# print("Scanning simulated genomes with candidate PWMs")
-# sim_genome_sites = ScanSeqWithPWMs(sim_genomes, cand_pwm, strand="*")
-# print(paste0("obtained ", nrow(sim_genome_sites), " binding sites from 1000 simulated genomes"))
-# 
-# # Save sites
-# print("saving binding sites on simulated genomes")
-# save(sim_genome_sites, file="output/sim_genome_sites_raw.RData") 
+# List candidate pwms - PWMs whose binding sites were found
+print("Filtering PWMs that were found in the genome")
+cand_pwm = pwm[names(pwm) %in% sites[, Matrix_id]]
+print(paste0("Reduced number of PWMs from ", length(pwm), " to ", length(cand_pwm)))
+ 
+# Scan the simulated genomes with these PWMs
+print("Scanning simulated genomes with candidate PWMs")
+sim_genome_sites = ScanSeqWithPWMs(sim_genomes, cand_pwm, strand="*")
+print(paste0("obtained ", nrow(sim_genome_sites), " binding sites from 1000 simulated genomes"))
+ 
+# Save sites
+print("saving binding sites on simulated genomes")
+save(sim_genome_sites, file="output/sim_genome_sites_raw.RData") 
 
 ################################################
 

@@ -66,13 +66,21 @@ readPWMsFromFasta = function (pwm_file) {
   return(pwms)
 }
 
+# Function to calculate PWM information content
+GetPWMEntropy = function(pwm){
+  m=as.matrix(pwm)
+  ic = -sum(m*log2(m))
+  return(ic)
+}
+
+
 # Multithreaded function to scan sequence(s) with multiple PWMs
 ScanSeqWithPWMs = function(seqString, pwmList, seqName, strand="*"){
   sites = foreach(i = 1:length(pwmList), .combine=rbind) %dopar% {
     # Read PWM ID
     id = as.character(names(pwmList)[i])
     # Scan genome
-    curr_sites = searchSeq(pwmList[[i]], seqString, min.score="95%", strand=strand, seqname = seqName)
+    curr_sites = searchSeq(pwmList[[i]], seqString, min.score="90%", strand=strand, seqname = seqName)
     if(length(curr_sites) > 0){
       # Convert to data table
       curr_sites = as.data.table(writeGFF3(curr_sites))

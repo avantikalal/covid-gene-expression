@@ -10,10 +10,6 @@ setwd("/covid-omics")
 ## NCBI # Downloaded from https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.
 ref_file="reference/sequence.fasta.txt"
 
-## ATtRACT # Downloaded from https://attract.cnic.es/download
-rbp_file = "ATtRACT/ATtRACT_db.txt"
-pwm_file = "ATtRACT/pwm.txt"
-
 ################################################
 
 # Import requirements
@@ -36,48 +32,14 @@ print("Reading reference genome")
 ref = readFasta(ref_file)
 
 # RBPs
-print("Reading RBPs")
-rbp = fread(rbp_file)
+print("Reading filtered RBPs")
+load("output/filtered_rbp.RData")
 
 # PWMs
-print("Reading PWMs")
-pwm = readPWMsFromFasta(pwm_file)
+print("Reading filtered PWMs")
+pwm = load("output/filtered_pwm.RData")
 
 ##############################################
-
-# Select only human RBPs
-print("Filtering human RBPs")
-initial_n = nrow(rbp)
-rbp = rbp[Organism == "Homo_sapiens",]
-print(paste0("Reduced number of RBPs from ", initial_n, " to ", nrow(rbp)))
-
-# See experiment types
-print("Types of experiments")
-print(rbp[, .N, by=Experiment_description][order(N, decreasing = T),])
-
-# See source databases
-print("Source databases")
-print(rbp[, .N, by=Database][order(N, decreasing = T),])
-
-# How many unique proteins are present?
-print("Number of unique human RBPs")
-print(rbp[, length(unique(Gene_name))])
-
-# Select unique RBP-PWM mappings
-print("Mapping RBPs to PWMs")
-rbp_pwm = unique(rbp[, .(Gene_name, Matrix_id)])
-
-# How many proteins have multiple PWMs?
-print("Number of PWMs per protein")
-print(rbp_pwm[, .N, by=Gene_name][order(N, decreasing = T),])
-
-##############################################
-
-# Select PWMs that match these RBPs
-print("Selecting PWMs that match to human RBPs")
-initial_n = length(pwm)
-pwm = pwm[names(pwm) %in% rbp_pwm[, Matrix_id]]
-print(paste0("Reduced number of PWMs from ", initial_n, " to ", length(pwm)))
 
 # Scan the genome with these PWMs
 print("Scanning the reference genome for PWMs")
@@ -85,6 +47,11 @@ sites = ScanSeqWithPWMs(ref[[1]], pwm, names(ref))
 print(paste0("Found ", nrow(sites), " sites."))
 
 ##############################################
+
+# Select unique RBP-PWM mappings
+print("Mapping RBPs to PWMs")
+rbp_pwm = unique(rbp[, .(Gene_name, Matrix_id)])
+
 # Match binding sites with protein name
 print("Matching sites to RBPs")
 sites = merge(sites, rbp_pwm, by="Matrix_id")
