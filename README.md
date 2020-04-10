@@ -10,7 +10,7 @@ https://github.com/virtual-biohackathons/covid-19-bh20/wiki/GeneExpression
 We want to perform RNAseq-based analyses on published datasets in order to better understand the interaction between human host and virus.
 
 <figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/mariferrarini-patch-11/Diagram_projects.png" width="400">
+  <img src="https://github.com/avantikalal/covid-gene-expression/blob/mariferrarini-patch-11/Diagram_projects.png" width="800">
   <figcaption>Fig.1 - We want to focus on already known genes (such as ACE2 and TMPRSS2) but also on new candidate ones that may play a punctual or a general role in the interaction between host and virus. To this end, we will perform extensive RNAseq analyses as described in the workflow section below</figcaption>
 </figure>
 
