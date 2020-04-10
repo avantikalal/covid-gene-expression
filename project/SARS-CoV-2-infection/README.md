@@ -31,19 +31,24 @@
 
 ## Software used in this project
 ### Command line tools
-- FastQC (https://github.com/s-andrews/FastQC) [docker image](quay.io/biocontainers/fastqc:0.11.5--1)
-- Fastq-screen (https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/) [docker image](quay.io/biocontainers/fastq-screen:0.11.3--pl5.22.0_0)
-- trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)[docker image](quay.io/biocontainers/trimmomatic:0.33--1)
-- STAR (https://github.com/alexdobin/STAR)[docker image](quay.io/biocontainers/star:2.7.3a--0)
-- Bowtie2 (http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)[docker image](quay.io/biocontainers/bowtie2:2.4.1--py38he513fc3_0)
-- HISAT2 (https://daehwankimlab.github.io/hisat2/)[docker image](quay.io/biocontainers/hisat2:2.2.0--py37he1b5a44_0)
-- TEtools (https://github.com/l-modolo/TEtools)[docker image](zavolab/tetools:1.0.0) **NB:** the command passed to Docker must specify python and the full path to the toolname, like so: `python3 /TEtools/TEcount.py`.
-- TEtranscripts (http://hammelllab.labsites.cshl.edu/software)[docker image](quay.io/biocontainers/tetranscripts:2.1.4--py_0)
-- LIONS (www.github.com/ababaian/LIONS)[docker image](hpobiolab/lions)
-- samtools / picard (http://samtools.sourceforge.net/; https://broadinstitute.github.io/picard/) [docker image](quay.io/biocontainers/picard:2.22.2--0)
-- featureCounts (http://subread.sourceforge.net) [docker image](hpobiolab/feature-counts)
-- MultiQC (https://github.com/ewels/MultiQC) [docker image](quay.io/biocontainers/multiqc:1.8--py_2)
-- KissSplice (http://kissplice.prabi.fr/) [docker image](hpobiolab/kiss-splice)
+
+| Tool | Image |
+| --- | --- |
+| [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | [quay.io/biocontainers/bowtie2:2.4.1--py38he513fc3_0](quay.io/biocontainers/bowtie2:2.4.1--py38he513fc3_0) ([Dockerfile]()) |
+| [FastQC](https://github.com/s-andrews/FastQC) | [quay.io/biocontainers/fastqc:0.11.5--1](quay.io/biocontainers/fastqc:0.11.5--1) ([Dockerfile]()) |
+| [Fastq-screen](https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/) | [quay.io/biocontainers/fastq-screen:0.11.3--pl5.22.0_0](quay.io/biocontainers/fastq-screen:0.11.3--pl5.22.0_0) ([Dockerfile]()) |
+| [featureCounts](http://subread.sourceforge.net) | [hpobiolab/feature-count](hpobiolab/feature-counts) ([Dockerfile](https://github.com/hpobio-lab/viral-analysis/blob/master/dockerfiles/feature-counts.Dockerfile)) |
+| [HISAT2](https://daehwankimlab.github.io/hisat2/) | [quay.io/biocontainers/hisat2:2.2.0--py37he1b5a44_0](quay.io/biocontainers/hisat2:2.2.0--py37he1b5a44_0) ([Dockerfile]()) |
+| [KissSplice](http://kissplice.prabi.fr/) | [hpobiolab/kiss-splice](hpobiolab/kiss-splice) ([Dockerfile]()https://github.com/hpobio-lab/viral-analysis/blob/master/dockerfiles/kiss-splice.Dockerfile) |
+| [LIONS](https://github.com/ababaian/LIONS) | [hpobiolab/lions](hpobiolab/lions) ([Dockerfile](https://github.com/hpobio-lab/viral-analysis/blob/master/dockerfiles/lions.Dockerfile)) |
+| [MultiQC](https://github.com/ewels/MultiQC) | [quay.io/biocontainers/multiqc:1.8--py_2](quay.io/biocontainers/multiqc:1.8--py_2) ([Dockerfile]()) |
+| [picard](https://broadinstitute.github.io/picard/) | [quay.io/biocontainers/picard:2.22.2--0](quay.io/biocontainers/picard:2.22.2--0) ([Dockerfile]()) |
+| [samtools](https://github.com/samtools/samtools) | [quay.io/biocontainers/picard:2.22.2--0](quay.io/biocontainers/picard:2.22.2--0) ([Dockerfile]()) |
+| [STAR](https://github.com/alexdobin/STAR) | [quay.io/biocontainers/star:2.7.3a--0](quay.io/biocontainers/star:2.7.3a--0) ([Dockerfile]()) |
+| [TEtools](https://github.com/l-modolo/TEtools) | [zavolab/tetools:1.0.0](zavolab/tetools:1.0.0) ([Dockerfile](https://github.com/zavolanlab/Dockerfiles/blob/master/TEtools/1.0.0/Dockerfile)) |
+| [TEtranscripts](http://hammelllab.labsites.cshl.edu/software) | [quay.io/biocontainers/tetranscripts:2.1.4--py_0](quay.io/biocontainers/tetranscripts:2.1.4--py_0) ([Dockerfile]()) |
+| [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) | [quay.io/biocontainers/trimmomatic:0.33--1](quay.io/biocontainers/trimmomatic:0.33--1) ([Dockerfile]()) |
+
 
 ### R packages
 
