@@ -27,27 +27,31 @@ print("Loading binding sites")
 load("output/sites.RData")
 load("output/annotated_sites.RData")
 
-# Load PWMs
+# Load fitered PWMs
 print("Loading PWMs")
-pwm = readPWMsFromFasta("ATtRACT/pwm.txt")
+load("output/filtered_pwm.RData")
 
+# Load filtered RBPs
+print("Loading RBPs")
+load("output/filtered_rbp.RData")
 ##############################################
 
 # Scan simulated genomes
 
-# # List candidate pwms - PWMs whose binding sites were found
-# print("Filtering PWMs that were found in the genome")
-# cand_pwm = pwm[names(pwm) %in% sites[, Matrix_id]]
-# print(paste0("Reduced number of PWMs from ", length(pwm), " to ", length(cand_pwm)))
-# 
-# # Scan the simulated genomes with these PWMs
-# print("Scanning simulated genomes with candidate PWMs")
-# sim_genome_sites = ScanSeqWithPWMs(sim_genomes, cand_pwm, strand="*")
-# print(paste0("obtained ", nrow(sim_genome_sites), " binding sites from 1000 simulated genomes"))
-# 
-# # Save sites
-# print("saving binding sites on simulated genomes")
-# save(sim_genome_sites, file="output/sim_genome_sites_raw.RData") 
+# List all PWMs for RBPs that were found in the genome
+print("Filtering PWMs for RBPs that were found in the genome")
+cand_pwm_ids = rbp[Gene_name %in% sites[, Gene_name], unique(Matrix_id)]
+cand_pwm = pwm[names(pwm) %in% cand_pwm_ids]
+print(paste0("Reduced number of PWMs from ", length(pwm), " to ", length(cand_pwm)))
+ 
+# Scan the simulated genomes with these PWMs
+print("Scanning simulated genomes with candidate PWMs")
+sim_genome_sites = ScanSeqWithPWMs(sim_genomes, cand_pwm)
+print(paste0("obtained ", nrow(sim_genome_sites), " binding sites from 1000 simulated genomes"))
+ 
+# Save sites
+print("saving binding sites on simulated genomes")
+save(sim_genome_sites, file="output/sim_genome_sites_raw.RData") 
 
 ################################################
 
@@ -56,14 +60,15 @@ print("Extracting binding sites in the 3'UTR")
 t_utr_sites = annotated_sites[annotated_sites$type == "three_prime_UTR",]
 print(paste0("Found ", nrow(t_utr_sites), " sites on the 3'UTR."))
 
-# List candidate pwms - PWMs whose binding sites were found
-print("Filtering PWMs that were found in the 3'UTR")
-cand_pwm = pwm[names(pwm) %in% t_utr_sites$Matrix_id]
+# List candidate pwms - PWMs for RBPs whose binding sites were found
+print("Filtering PWMs of RBPs that were found in the 3'UTR")
+cand_pwm_ids = rbp[Gene_name %in% t_utr_sites$Gene_name, unique(Matrix_id)]
+cand_pwm = pwm[names(pwm) %in% cand_pwm_ids]
 print(paste0("Reduced number of PWMs from ", length(pwm), " to ", length(cand_pwm)))
 
 # Scan the simulated genomes with these PWMs
 print("Scanning simulated 3'UTRs with candidate PWMs")
-sim_t_utr_sites = ScanSeqWithPWMs(sim_t_utrs, cand_pwm, strand="*")
+sim_t_utr_sites = ScanSeqWithPWMs(sim_t_utrs, cand_pwm)
 print(paste0("obtained ", nrow(sim_t_utr_sites), " binding sites from 1000 simulated 3'UTRs"))
 
 # Save sites
@@ -76,14 +81,15 @@ save(sim_t_utr_sites, file="output/sim_t_utr_sites_raw.RData")
 print("Extracting binding sites in the 5'UTR")
 f_utr_sites = annotated_sites[annotated_sites$type == "five_prime_UTR",]
 
-# List candidate pwms - PWMs whose binding sites were found
-print("Filtering PWMs that were found in the 5'UTR")
-cand_pwm = pwm[names(pwm) %in% f_utr_sites$Matrix_id]
+# List candidate pwms - PWMs for RBPs whose binding sites were found
+print("Filtering PWMs for RBPs that were found in the 5'UTR")
+cand_pwm_ids = rbp[Gene_name %in% f_utr_sites$Gene_name, unique(Matrix_id)]
+cand_pwm = pwm[names(pwm) %in% cand_pwm_ids]
 print(paste0("Reduced number of PWMs from ", length(pwm), " to ", length(cand_pwm)))
 
 # Scan the simulated genomes with these PWMs
 print("Scanning simulated 5'UTRs with candidate PWMs")
-sim_f_utr_sites = ScanSeqWithPWMs(sim_f_utrs, cand_pwm, strand="*")
+sim_f_utr_sites = ScanSeqWithPWMs(sim_f_utrs, cand_pwm)
 print(paste0("obtained ", nrow(sim_f_utr_sites), " binding sites from 1000 simulated 5'UTRs"))
 
 # Save sites
