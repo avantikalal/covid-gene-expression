@@ -48,9 +48,9 @@ Running all the scripts in order produces the following output files:
 3. `t_utr_site_count.RData`: counts and p-values for RBP binding to the SARS-CoV-2 genome 3'UTR
 
 ### Filtered significant hits
-1. `genome_hits.RData`: RBPs whose binding sites are significantly enriched in the SARS-CoV-2 genome
-2. `f_utr_hits.RData`: RBPs whose binding sites are significantly enriched in the 5'UTR
-3. `t_utr_hits.RData`: RBPs whose binding sites are significantly enriched in the 3'UTR
+1. `genome_hits.tsv`: RBPs whose binding sites are significantly enriched in the SARS-CoV-2 genome
+2. `f_utr_hits.tsv`: RBPs whose binding sites are significantly enriched in the 5'UTR
+3. `t_utr_hits.tsv`: RBPs whose binding sites are significantly enriched in the 3'UTR
 
 ### Dockerfile
 A docker file with all of the R dependencies is available at [hpobiolab/rbp-pwm-r](https://hub.docker.com/orgs/hpobiolab/repositories)
