@@ -12,7 +12,7 @@
 | Pickett, Brett E | Brigham Young University, Provo, UT, USA. | https://orcid.org/0000-0001-7930-8160 |
 | Rebollo, Rita | University of Lyon, INSA-Lyon, INRA, BF2I, UMR0203, F-69621, Villeurbanne, France | N/A |
 | Ruiz-Arenas, Carlos | Centro de Investigación Biomédica en Red de Enfermedades Raras, Universitat Pompeu Fabra, Spain | N/A |
-| Awe, Olaitan | University of Ibadan, Ibadan, Nigeria | N/A |
+| Awe, Olaitan | University of Ibadan, Ibadan, Nigeria | 0000-0002-4257-3611 |
 | Bedi, Suhana | University of Texas at Dallas, TX, USA | N/A |
 | Georgaki, Marielena | N/A | N/A |
 | James, Chela | Institute of Cancer Research, London, UK | N/A |
