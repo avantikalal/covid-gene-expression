@@ -51,6 +51,7 @@ Running all the scripts in order produces the following output files:
 1. `genome_hits.tsv`: RBPs whose binding sites are significantly enriched in the SARS-CoV-2 genome
 2. `f_utr_hits.tsv`: RBPs whose binding sites are significantly enriched in the 5'UTR
 3. `t_utr_hits.tsv`: RBPs whose binding sites are significantly enriched in the 3'UTR
+4. `genome_neg_hits.tsv`: RBPs whose binding sites are significantly enriched in the negative strand of the SARS-CoV-2 genome
 
 ### Dockerfile
 A docker file with all of the R dependencies is available at [hpobiolab/rbp-pwm-r](https://hub.docker.com/orgs/hpobiolab/repositories)
