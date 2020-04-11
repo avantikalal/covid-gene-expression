@@ -1,4 +1,8 @@
 # Covid-19 Gene Expression Working Group
+
+[![code_license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![data_license](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+
 Hackathon team: gene expression analysis for Covid-19 Virtual Biohackathon (vBH)
 
 ### Link to vBH Github
@@ -32,7 +36,7 @@ The ideas proposed during this hackathon were divided into six projects (Fig. 1)
 
 5. Reporting findings to electronic medical records: Determining how to bring the results obtained from the previous analyses to clinical practice.
 
-6. Workflows for reproducibility of analysis: Packaging the workflows devised within the Gene Expression group to enable seamless integration and approach reproducibility. 
+6. Workflows for reproducibility of analysis: Packaging the workflows devised within the Gene Expression group to enable seamless integration and approach reproducibility.
 
 Please see the [project](project) folder for details on each individual project.
 
@@ -43,4 +47,7 @@ contributed to the project.
 ## Progress tracking
 We are tracking progress on project-specific boards here: https://github.com/avantikalal/covid-gene-expression/projects
 
-
+## Licensing
+This working group is dedicated to Open Science. All code in this repository is licensed under the
+[MIT license](LICENSE.md). Data generated during the course of this project is licensed under the
+[CC0 license](DATA_LICENSE.md).
