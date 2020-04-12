@@ -14,8 +14,8 @@ https://github.com/virtual-biohackathons/covid-19-bh20/wiki/GeneExpression
 As part of the virtual BioHackathon 2020, we formed a working group that focused on the analysis of gene expression in the context of COVID-19. More specifically, we performed transcriptome analyses on published datasets in order to better understand the interaction between the human host and the SARS-CoV-2 virus.
 
 <figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/mariferrarini-patch-11/Diagram_projects.png" width="800">
-  <figcaption>Fig. 1. Project structure and interaction. Projects 1 and 2 along with literature research will provide a list of candidate genes for Project 3 and 4 that will take into account external factors (comorbidities, and potential drug treatments). Project 5 will implement the findings into electronic medical records. Finally, Project 6 allows the efforts of all of the previous projects to be clearly detailed into workflows for increased reproducibility.</figcaption>
+  <img src="https://github.com/avantikalal/covid-gene-expression/blob/master/Overview.jpeg" width="800">
+  <figcaption>Fig. 1. Project structure and interaction. Project 1 and 2 along with literature research will provide a list of candidate genes for Project 3 and 4 that will take into account external factors (comorbidities, and potential drug treatments). All data analyzed during this project are fully available to the medical community and meet the FAIR principles. Finally, Project 5 allows the efforts of all of the previous projects to be clearly detailed into workflows for increased reproducibility.</figcaption>
 </figure>
 
 ## Deliverables
@@ -24,19 +24,17 @@ _Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected dataset
 _Methodological:_ Create a packaged reproducible pipeline in Docker to help scientists to easily treat their RNA-Seq data and for us if any new dataset comes out
 
 ## Projects
-The ideas proposed during this hackathon were divided into six projects (Fig. 1):
+
+The ideas proposed during this hackathon were divided into five projects (Fig. 1):
 
 1. SARS-CoV-2 infection global analyses: Understanding how global gene expression in human cells responds to infection by the SARS-CoV-2 virus, including changes in gene regulatory networks.
-
 2. Human-virus interaction analyses: Identification of human RNA-binding proteins that might be key in the interaction between human cells and the RNA genome of SARS-CoV-2.
-
 3. Increased risk factors analyses: Investigating gene expression in other datasets with the goal of identifying commonalities and differences with the two previous analyses, focusing on specific genes.
+4. Identification of potential pharmacological treatments: Searching for potential drugs that could impact the expression of human genes that are important for the interaction of human and virus.
+5. Workflows for reproducibility of analysis: Packaging the workflows devised within the Gene Expression group to enable seamless integration and approach reproducibility. 
 
-4. Subtyping of expression response to drugs after COVID infection: Searching for potential drugs that could impact the expression of human genes that are important for the interaction of human and virus.
+Projects 1 and 2 aim to identify human genes that are important in the process of viral infection of human cells. Projects 3 and 4 aim to take the candidate genes identified in projects 1 and 2, as well as by independent studies, and relate them to clinical information and to possible therapeutic interventions. All data analyzed during this study are fully available and meet the FAIR principles of Findability, Accessibility, Interoperability, and Reusability. Finally, Project 5 aims to package and containerize software and workflows used and generated here in a reusable manner, ultimately providing scalable and reproducible workflows.
 
-5. Reporting findings to electronic medical records: Determining how to bring the results obtained from the previous analyses to clinical practice.
-
-6. Workflows for reproducibility of analysis: Packaging the workflows devised within the Gene Expression group to enable seamless integration and approach reproducibility.
 
 Please see the [project](project) folder for details on each individual project.
 
