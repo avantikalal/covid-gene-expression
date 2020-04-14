@@ -1,10 +1,5 @@
 ##############################################
 
-### Modify this section for your local environment!!### 
-
-# Set working directory
-setwd("/covid-omics")
-
 # List input data files
 
 ## ATtRACT # Downloaded from https://attract.cnic.es/download

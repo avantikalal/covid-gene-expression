@@ -1,9 +1,3 @@
-### Modify this section for your local environment!!### 
-
-# Set working directory
-setwd("/covid-omics")
-
-################################################
 
 # Import requirements
 library(data.table)

@@ -1,10 +1,5 @@
 ##############################################
 
-### Modify this section for your local environment!!### 
-
-# Set working directory
-setwd("/covid-omics")
-
 # List input data files
 
 ## NCBI # Downloaded from https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.

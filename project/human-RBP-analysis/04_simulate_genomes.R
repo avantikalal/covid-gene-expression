@@ -1,11 +1,6 @@
 ##############################################
 
-### Modify this section for your local environment!!### 
-
 n_sims = 5000
-
-# Set working directory
-setwd("/covid-omics")
 
 # Import requirements
 library(Biostrings)
