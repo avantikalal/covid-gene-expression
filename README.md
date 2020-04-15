@@ -35,7 +35,6 @@ The ideas proposed during this hackathon were divided into five projects (Fig. 1
 
 Projects 1 and 2 aim to identify human genes that are important in the process of viral infection of human cells. Projects 3 and 4 aim to take the candidate genes identified in projects 1 and 2, as well as by independent studies, and relate them to clinical information and to possible therapeutic interventions. All data analyzed during this study are fully available and meet the FAIR principles of Findability, Accessibility, Interoperability, and Reusability. Finally, Project 5 aims to package and containerize software and workflows used and generated here in a reusable manner, ultimately providing scalable and reproducible workflows.
 
-
 Please see the [project](project) folder for details on each individual project.
 
 ## Contributors
@@ -49,3 +48,6 @@ We are tracking progress on project-specific boards here: https://github.com/ava
 This working group is dedicated to Open Science. All code in this repository is licensed under the
 [MIT license](LICENSE.md). Data generated during the course of this project is licensed under the
 [CC0 license](DATA_LICENSE.md).
+
+## Disclaimer
+This repository and the created results are subject to ongoing research and have thus NOT yet undergone any scientific peer-review. That is, none of the contents can be considered to be free of errors and must be taken with caution!
