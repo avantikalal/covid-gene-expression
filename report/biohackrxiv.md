@@ -5,7 +5,13 @@ tags:
   - Preprint
   - Gene expression
   - RNA-seq
+  - RNA-binding proteins
+  - Host-pathogen interactions
+  - SARS-CoV-2
   - COVID-19
+  - Transcriptomics
+  - Reproducible workflows
+  - FAIR data
 authors:
   - name:Mariana G. Ferrarini
     orcid: https://orcid.org/0000-0002-9574-9991
