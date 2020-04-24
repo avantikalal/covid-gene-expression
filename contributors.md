@@ -2,7 +2,6 @@
 | --- | --- | --- |
 | Ferrarini, Mariana G | University of Lyon, INSA-Lyon, INRA, BF2I, UMR0203, F-69621, Villeurbanne, France | https://orcid.org/0000-0002-9574-9991 |
 | Aguiar-Pulido, Vanessa | Weill Cornell Medicine, Cornell University, New York, NY, USA | N/A |
-| Busby, Ben | DNAnexus, Mountain View, CA, USA | N/A |
 | Dawson, Eric T | Division of Cancer Epidemiology and Genetics, National Cancer Institute, Rockville Maryland, USA | https://orcid.org/0000-0001-5448-1653 |
 | Guarracino, Andrea | Centre for Molecular Bioinformatics, Department of Biology, University Of Rome, Tor Vergata, Via della Ricerca Scientifica snc, 00133 Rome, Italy | https://orcid.org/0000-0001-9744-131X |
 | Gruber, Andreas | Oxford Big Data Institute, Nuffield Department of Medicine, University of Oxford, Oxford, UK | N/A |
@@ -14,12 +13,15 @@
 | Ruiz-Arenas, Carlos | Centro de Investigación Biomédica en Red de Enfermedades Raras, Universitat Pompeu Fabra, Spain | N/A |
 | Awe, Olaitan | University of Ibadan, Ibadan, Nigeria | N/A |
 | Bedi, Suhana | University of Texas at Dallas, TX, USA | N/A |
-| Georgaki, Marielena | N/A | N/A |
+| Busby, Ben | DNAnexus, Mountain View, CA, USA | N/A |
+| Georgaki, Marielena | Virtual BioHackathon Participant | N/A |
 | James, Chela | Institute of Cancer Research, London, UK | N/A |
+| Martinez Gonzalez, Itziar | Amsterdam UMC, Amsterdam, The Netherlands | N/A |
 | Meldal, Birgit | European Bioinformatics Institute (EMBL-EBI), European Molecular Biology Laboratory, Wellcome Genome Campus, Hinxton, Cambridgeshire CB10 1SD, UK | N/A |
 | Mucha, Scheila G | INRIA Grenoble Rhône-Alpes, Montbonnot-Saint-Martin, France | N/A |
+| Nabavi, Noushin | BC Ministry of Health, Victoria, Canada | N/A |
 | Neiro, Jakke | Department of Zoology, University of Oxford, 11a Mansfield Rd, Oxford OX1 3SZ, UK | N/A |
-| Queralt-Rosinach, Núria | Department of Biomedical Informatics, Harvard Medical School, Boston, MA, USA | N/A |
+| Queralt-Rosinach, Núria | Virtual BioHackathon Participant | N/A |
 | Rocca-Serra, Philippe | Oxford e-Research Centre, Department of Engineering Science, University of Oxford, Oxford, UK | N/A |
 | Siqueira de Oliveira, Daniel | Université Claude Bernard Lyon 1, Villeurbanne, France | N/A |
 | Tsagiopoulou, Maria | Institute of Applied Biosciences, Centre for Research and Technology Hellas, Thessaloniki, Greece | N/A |
