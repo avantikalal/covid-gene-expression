@@ -196,7 +196,7 @@ We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infec
 
 **Table 1**. Top 15 upregulated genes which were common to the three methods (only the log2FC and FDR-adjusted p-values from edgeR are indicated below).
 
-|  GeneSymbol  |  lo2gFC  |  padj  |
+|  GeneSymbol  |  log2FC  |  padj  |
 | ---- | ---- | ---- |
 |  S100A7  |  8.342  |  0.002  |
 |  SPRR2E  |  3.57  |  0  |
