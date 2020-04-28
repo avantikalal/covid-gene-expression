@@ -192,7 +192,7 @@ We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infec
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig3.png" align="middle" width="800">
   <figcaption><b>Fig. 3</b>. Bar Plots depicting the number of genes DE from each of the three methods used and the overlap between them for each tested condition (see Methods). We validated as high confidence DE the genes detected at least in two methods.</figcaption>
 </figure><br/>
-
+<br/>
 
 **Table 1**. Top 15 upregulated genes which were common to the three methods (only the log2FC and FDR-adjusted p-values from edgeR are indicated below).
 
@@ -234,7 +234,7 @@ We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infec
 |  OLFML2A  |  -0.961  |  0.002  |
 |  MXRA5  |  -0.902  |  0.003  |
 |  KRT15  |  -0.914  |  0.003 |
-
+<br/>
 
 **Functional enrichment analyses**
 
@@ -458,7 +458,7 @@ We combined the virus results reported in Project 1, with those generated from a
 
 ### Analysis of HLA types that predispose individuals and populations to COVID-19 
 
-A recent preprint (Nguyen et al., 2020) describes an in silico analysis of viral peptide-MHC class I binding affinity across all known HLA -A, -B, and -C genotypes for all SARS-CoV-2 peptides. The SARS-CoV-2 proteome is successfully sampled and presented by a diversity of HLA alleles. In particular, HLA-B*46:01 had the fewest predicted binding peptides for SARS-CoV-2, and has already been shown to correlate with SARS severity in Asian populations (Lin et al. 2003). Conversely, HLA-B*15:03 showed the greatest capacity to present highly conserved SARS-CoV-2 peptides. Three of the worst-presenting HLA-A, -B, and -C alleles are A*25:01, B*46:01, C*01:02, while three of the best-ones are A*02:02, B*15:03, and C*12:03.  Results are summarized in **Table 11**.
+A recent preprint (Nguyen et al., 2020) describes an in silico analysis of viral peptide-MHC class I binding affinity across all known HLA -A, -B, and -C genotypes for all SARS-CoV-2 peptides. The SARS-CoV-2 proteome is successfully sampled and presented by a diversity of HLA alleles. In particular, HLA-B*46:01 had the fewest predicted binding peptides for SARS-CoV-2, and has already been shown to correlate with SARS severity in Asian populations (Lin et al. 2003). Conversely, HLA-B\*15:03 showed the greatest capacity to present highly conserved SARS-CoV-2 peptides. Three of the worst-presenting HLA-A, -B, and -C alleles are A\*25:01, B\*46:01, C\*01:02, while three of the best-ones are A\*02:02, B\*15:03, and C\*12:03.  Results are summarized in **Table 11**.
 
 
 **Table 11**. Result of HLA typing
