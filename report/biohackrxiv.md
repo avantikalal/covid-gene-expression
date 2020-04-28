@@ -177,21 +177,21 @@ We used the first RNA-Seq dataset available of in vitro cells infected with SARS
 
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig2.png" align="middle" width="800">
-  <figcaption><b>Fig. 2</b>. PCA analysis of samples used in this report. The first 2 components (~85% of total variance) showed different sources of variation in the data. Replicate samples from the same group cluster correctly together. The image on the left shows that different cell lines, i.e. A549 and NHBE, present strongly different expression profiles; the image on the right shows samples from the same batch cluster together. PC = principal component, vst = variance stabilizing transformation (Anders and Huber 2010).</figcaption>
-</figure></br>
+  <figcaption margin=><b>Fig. 2</b>. PCA analysis of samples used in this report. The first 2 components (~85% of total variance) showed different sources of variation in the data. Replicate samples from the same group cluster correctly together. The image on the left shows that different cell lines, i.e. A549 and NHBE, present strongly different expression profiles; the image on the right shows samples from the same batch cluster together. PC = principal component, vst = variance stabilizing transformation (Anders and Huber 2010).</figcaption>
+</figure><br/>
 
 
 Since our aim was to find specific SARS-CoV-2-infection regulated genes, we decided to perform the downstream analyses on pairwise comparisons controls vs. infected within each experiment (batch), maintaining the different cell lines separated, and comparing the results of the differential expression and functional analyses across experiments.
 
 **Differentially expressed genes**
 
-We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infection, whether detected in NHBE or in A549 cells. Fig. 3 shows the number of genes DE detected from each of the methods used: DESeq2 (Love et al., 2014), edgeR (Robinson et al., 2010) and limma-voom (Law et al., 2014); for details, see the Methods section). In order to select SARS-CoV-2 specific genes, we selected among these DE genes only those that were not present in the other RSV and H1N1 infected cells. The full list has been made publicly available through the Zenodo platform (see the “Data, GitHub repositories and reproducible workflows” section). The top 15 genes up- and down-regulated are given in **Table 1** and **Table 2**.
+We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infection, whether detected in NHBE or in A549 cells. Fig. 3 shows the number of genes DE detected from each of the methods used: DESeq2 (Love et al., 2014), edgeR (Robinson et al., 2010) and limma-voom (Law et al., 2014); for details, see the Methods section. In order to select SARS-CoV-2 specific genes, we selected among these DE genes only those that were not present in the other RSV and H1N1 infected cells. The full list has been made publicly available through the Zenodo platform (see the “Data, GitHub repositories and reproducible workflows” section). The top 15 genes up- and down-regulated are given in **Table 1** and **Table 2**.
 
 
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig3.png" align="middle" width="800">
   <figcaption><b>Fig. 3</b>. Bar Plots depicting the number of genes DE from each of the three methods used and the overlap between them for each tested condition (see Methods). We validated as high confidence DE the genes detected at least in two methods.</figcaption>
-</figure></br>
+</figure><br/>
 
 
 **Table 1**. Top 15 upregulated genes which were common to the three methods (only the log2FC and FDR-adjusted p-values from edgeR are indicated below).
@@ -259,7 +259,7 @@ We estimated SARS-CoV-2 gene expression in samples infected with the virus. To t
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig4.png" align="middle" width="600">
   <figcaption><b>Fig. 4</b>. Hierarchical clustering based on the first two principal components calculated from viral transcript abundances of samples infected with SARS-CoV-2. Samples are labeled with SRA identifiers and names of cell lines. Numbers represent technical replicates.</figcaption>
-</figure></br>
+</figure><br/>
 
 
 ### Comparative analysis of host response to SARS-CoV-2, SARS-CoV-1, RSV, IAV, and MERS-CoV infections (Pipeline 2)
@@ -498,7 +498,7 @@ Several high-confidence down-regulated genes from (Table 2) were also of interes
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig5.png" align="middle" width="450">
   <figcaption><b>Fig. 5</b>. Proposed mechanisms of action for SARS-CoV-2 infection of bronchial epithelial cells detected in this study. SARS-CoV-2 induced genes in NHBE cells include genes shared with infections by other respiratory viruses such as IFN and IL-6 but also some specific genes such as GM-CSF or IL-32. The release of these cytokines from the infected lung epithelium results in the recruitment, differentiation and activation of the innate immune cells such as NK, macrophages or neutrophils.</figcaption>
-</figure></br>
+</figure><br/>
 
 
 To identify regulators that can explain the genome-scale expression changes that occur upon virus infection we have performed motif activity response analysis (Balwierz et al., 2014). Among the motifs that were consistently inferred for NHBE and A549 cells are the RELA transcriptional regulator as well as interferon-regulatory factors (IRFs), which have previously been reported to act in the response to virus infection (Chiang & Liu, 2018; Wang et al., 2010; Zhao et al., 2015).
@@ -581,7 +581,7 @@ Reads were also aligned against the SARS-CoV-2 Wuhan-Hu-1 reference genome (NC_0
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig6.jpeg" align="middle" width="700">
   <figcaption><b>Fig. 6</b>. Overview of the workflow for the analysis of RNA-seq data from cells infected with viruses.</figcaption>
-</figure></br>
+</figure><br/>
 
 
 The highly reproducible, containerized pipeline was implemented in Nextflow based on the nf-core framework (Ewels et al., 2020) to enable its reuse with additional datasets (see Project 5). A step for read filtration was included in the workflow, in which 0.01% of common reads between the human and virus reference genomes were removed. This was solely based on the observation that 0.03% reads mapped to the virus reference genome for infected human samples while, as expected, nearly no reads mapped to the virus for the uninfected human samples.
@@ -630,7 +630,7 @@ Additionally, all the software described in this manuscript has been made availa
 <figure>
   <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig7.jpeg" align="middle" width="400">
   <figcaption><b>Fig. 7</b>. Nextflow workflow for Project 1 and pre-processing steps.</figcaption>
-</figure></br>
+</figure><br/>
 
 
 # Data, GitHub repositories and reproducible workflows
