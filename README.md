@@ -23,6 +23,8 @@ _Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected dataset
 
 _Methodological:_ Create a packaged reproducible pipeline in Docker to help scientists to easily treat their RNA-Seq data and for us if any new dataset comes out
 
+The report describing all the work and results generated during the virtual Biohackathon can be found [here](report/biohackrxiv.md).
+
 ## Projects
 
 The ideas proposed during this hackathon were divided into five projects (Fig. 1):
@@ -33,7 +35,7 @@ The ideas proposed during this hackathon were divided into five projects (Fig. 1
 4. Identification of potential pharmacological treatments: Searching for potential drugs that could impact the expression of human genes that are important for the interaction of human and virus.
 5. Workflows for reproducibility of analysis: Packaging the workflows devised within the Gene Expression group to enable seamless integration and approach reproducibility. 
 
-Projects 1 and 2 aim to identify human genes that are important in the process of viral infection of human cells. Projects 3 and 4 aim to take the candidate genes identified in projects 1 and 2, as well as by independent studies, and relate them to clinical information and to possible therapeutic interventions. All data analyzed during this study are fully available and meet the FAIR principles of Findability, Accessibility, Interoperability, and Reusability. Finally, Project 5 aims to package and containerize software and workflows used and generated here in a reusable manner, ultimately providing scalable and reproducible workflows.
+Projects 1 and 2 aim to identify human genes that are important in the process of viral infection of human cells. Projects 3 and 4 aim to take the candidate genes identified in projects 1 and 2, as well as by independent studies, and relate them to clinical information and to possible therapeutic interventions. All data analyzed during this study are fully available and meet the FAIR principles of **F**indability, **A**ccessibility, **I**nteroperability, and **R**eusability. Finally, Project 5 aims to package and containerize software and workflows used and generated here in a reusable manner, ultimately providing scalable and reproducible workflows.
 
 Please see the [project](project) folder for details on each individual project.
 

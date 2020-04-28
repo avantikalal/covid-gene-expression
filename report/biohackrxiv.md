@@ -575,7 +575,7 @@ In the first processing workflow (**Fig. 6**), STAR was used to map the reads fr
 
 Subsequently, an exploratory data analysis was carried out based on the transformed values obtained after applying the variance stabilizing transformation (Anders and Huber 2010) implemented in the vst() function of DESeq2 (Love et al. 2014). Principal component analysis (PCA) was performed to evaluate the main sources of variation in the data. EdgeR (Robinson et al. 2010), Limma-voom (Law et al. 2014) and DESeq2 (Love et al. 2014) were then used to obtain pairwise differential expression, applying a statistical cut-off of 0.05 for the adjusted p-value, retaining only the set of genes which are identified by at least two methods across the condition of interest. The P-values obtained were adjusted using the Benjamini-Hochberg method. Finally, a comprehensive enrichment analysis was performed employing GeneAnalytics (Ben-Ari Fuchs et al., 2016), including Gene Ontology (GO) and pathway enrichment analyses. Within GeneAnalytics, p-values are calculated assuming an underlying binomial distribution and corrected for multiple comparison using False Discovery Rate (FDR).
 
-Reads were also aligned against the SARS-CoV-2 Wuhan-Hu-1 reference genome (NC_045512.2) using HISAT2 v2.2.0. Thereafter,  reads that aligned to both the human and virus reference genome with the same edit distance were discarded. At last, StringTie v2.1.1 was used for gene count generation for the viral reads. The pipeline for this workflow can be found here. (https://github.com/chelauk/covidhackathon) 
+Reads were also aligned against the SARS-CoV-2 Wuhan-Hu-1 reference genome (NC_045512.2) using HISAT2 v2.2.0. Thereafter,  reads that aligned to both the human and virus reference genome with the same edit distance were discarded. At last, StringTie v2.1.1 was used for gene count generation for the viral reads.
 
 
 <figure>
@@ -622,7 +622,7 @@ A complementary analysis used an existing method (Martinez Viedma & Pickett, 201
 
 ## Project 5: Reproducible workflows
 
-With the goal of making our protocols available to the scientific community, we have packaged the software and pipeline described in Project 1 Pipeline 1. The fully reproducible, containerized pipeline was implemented in Nextflow (Di Tommaso et al., 2017) based on the nf-core framework (Ewels et al., 2020) to enable the reuse for additional data sets and verification generated results. **Fig. 7** depicts the proposed reproducible workflow.
+With the goal of making our protocols available to the scientific community, we have packaged the software and pipeline described in Project 1 Pipeline 1. The fully reproducible, containerized pipeline was implemented in Nextflow (Di Tommaso et al., 2017) based on the nf-core framework (Ewels et al., 2020) to enable the reuse for additional data sets and verification generated results. **Fig. 7** depicts the proposed reproducible workflow. The pipeline for this workflow can be found at  https://github.com/chelauk/covidhackathon.
 
 Additionally, all the software described in this manuscript has been made available using Docker (Merkel, 2014) containers. As part of our future work, we aim to make a similar pipeline available for the analysis in Project 2.
 
