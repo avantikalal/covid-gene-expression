@@ -1,5 +1,5 @@
 ---
-title: 'BioHackrXiv contribution template'
+title: 'Comprehensive analysis of human SARS-CoV-2 infection and host-virus interaction'
 tags:
   - BioHackathon
   - Preprint
