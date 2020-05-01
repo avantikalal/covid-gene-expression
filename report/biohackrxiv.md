@@ -13,7 +13,7 @@ tags:
   - Reproducible workflows
   - FAIR data
 authors:
-  - name:Mariana G. Ferrarini
+  - name: Mariana G. Ferrarini
     orcid: https://orcid.org/0000-0002-9574-9991
     affiliation: 1, *
   - name: Vanessa Aguiar-Pulido
