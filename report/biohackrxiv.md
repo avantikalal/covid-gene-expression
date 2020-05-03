@@ -123,7 +123,7 @@ affiliations:
  - name: Institute of Applied Biosciences, Centre for Research and Technology Hellas, Thessaloniki, Greece
    index: 23
 date: 12 April 2020
-bibliography: paper.bib
+bibliography: biohackrxiv.bib
 ---
 
 # Introduction
