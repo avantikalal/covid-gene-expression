@@ -458,7 +458,7 @@ We combined the virus results reported in Project 1, with those generated from a
 
 ### Analysis of HLA types that predispose individuals and populations to COVID-19 
 
-A recent preprint [@Nguyen2020-yl] describes an in silico analysis of viral peptide-MHC class I binding affinity across all known HLA -A, -B, and -C genotypes for all SARS-CoV-2 peptides. The SARS-CoV-2 proteome is successfully sampled and presented by a diversity of HLA alleles. In particular, HLA-B\*46:01 had the fewest predicted binding peptides for SARS-CoV-2, and has already been shown to correlate with SARS severity in Asian populations (Lin et al. 2003). Conversely, HLA-B\*15:03 showed the greatest capacity to present highly conserved SARS-CoV-2 peptides. Three of the worst-presenting HLA-A, -B, and -C alleles are A\*25:01, B\*46:01, C\*01:02, while three of the best-ones are A\*02:02, B\*15:03, and C\*12:03.  Results are summarized in **Table 11**.
+A recent preprint [@Nguyen2020-yl] describes an in silico analysis of viral peptide-MHC class I binding affinity across all known HLA -A, -B, and -C genotypes for all SARS-CoV-2 peptides. The SARS-CoV-2 proteome is successfully sampled and presented by a diversity of HLA alleles. In particular, HLA-B\*46:01 had the fewest predicted binding peptides for SARS-CoV-2, and has already been shown to correlate with SARS severity in Asian populations [@Lin2003-tv]. Conversely, HLA-B\*15:03 showed the greatest capacity to present highly conserved SARS-CoV-2 peptides. Three of the worst-presenting HLA-A, -B, and -C alleles are A\*25:01, B\*46:01, C\*01:02, while three of the best-ones are A\*02:02, B\*15:03, and C\*12:03.  Results are summarized in **Table 11**.
 
 
 **Table 11**. Result of HLA typing
