@@ -23,7 +23,7 @@ _Biological:_ Perform a global RNA-Seq analysis with SARS-CoV-2 infected dataset
 
 _Methodological:_ Create a packaged reproducible pipeline in Docker to help scientists to easily treat their RNA-Seq data and for us if any new dataset comes out
 
-The report describing all the work and results generated during the virtual Biohackathon can be found [here](report/paper.pdf).
+The report describing all the work and results generated during the virtual BioHackathon can be found [here](report/paper.pdf).
 
 ## Projects
 
