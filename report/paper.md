@@ -1,5 +1,7 @@
 ---
-title: 'Comprehensive analysis of human SARS-CoV-2 infection and host-virus interaction'
+title: 'Global analysis of human SARS-CoV-2 infection and host-virus interaction'
+title_short: 'Global analysis of human SARS-CoV-2 infection and host-virus interaction'
+tags:
 tags:
   - BioHackathon
   - Preprint
@@ -15,34 +17,34 @@ tags:
 authors:
   - name: Mariana G. Ferrarini
     orcid: https://orcid.org/0000-0002-9574-9991
-    affiliation: 1, *
+    affiliation: 1, 24
   - name: Vanessa Aguiar-Pulido
-    affiliation: 2, #
+    affiliation: 2, 25
   - name: Eric T. Dawson
-    affiliation: 3, #
+    affiliation: 3, 25
   - name: Andrea Guarracino
     orcid: https://orcid.org/0000-0001-9744-131X
-    affiliation: 4, #
+    affiliation: 4, 25
   - name: Andreas Gruber
     orcid: https://orcid.org/0000-0001-7664-4257
-    affiliation: 5, #
+    affiliation: 5, 25
   - name: Lukas Heumos
     orcid: https://orcid.org/0000-0002-8937-3457
-    affiliation: 6, #
+    affiliation: 6, 25
   - name: Alexander Kanitz
     orcid: https://orcid.org/0000-0002-3468-0652
-    affiliation: 7, #
+    affiliation: 7, 25
   - name: Avantika Lal
     orcid: https://orcid.org/0000-0002-5827-0826
-    affiliation: 8, #
+    affiliation: 8, 25
   - name: Brett E. Pickett
     orcid: https://orcid.org/0000-0001-7930-8160
-    affiliation: 9, #
+    affiliation: 9, 25
   - name: Rita Rebollo
     orcid: https://orcid.org/0000-0002-8138-5082
-    affiliation: 1, #
+    affiliation: 1, 25
   - name: Carlos Ruiz-Arenas
-    affiliation: 10, #
+    affiliation: 10, 25
   - name: Olaitan Awe
     affiliation: 11
   - name: Suhana Bedi
@@ -72,10 +74,6 @@ authors:
   - name: Maria Tsagiopoulou
     affiliation: 23
 affiliations:
- - name: Group coordinator
-   index: *
- - name: Project leader
-   index: #
  - name: University of Lyon, INSA-Lyon, INRA, BF2I, Villeurbanne, France
    index: 1
  - name: Center for Neurogenetics, Weill Cornell Medicine, Cornell University, New York, NY, USA
@@ -122,15 +120,22 @@ affiliations:
    index: 22
  - name: Institute of Applied Biosciences, Centre for Research and Technology Hellas, Thessaloniki, Greece
    index: 23
+ - name: Group coordinator
+   index: 24
+ - name: Project leader
+   index: 25
 date: 12 April 2020
 bibliography: paper.bib
+event: Covid2020
+group: Gene Expression Working Group
+authors_short: M. G. Ferrarini & V. Aguiar-Pulido \emph{et al.}
 ---
 
 # Introduction
 
 As part of the virtual BioHackathon 2020, we formed a working group that focused on the analysis of gene expression in the context of COVID-19. More specifically, we performed transcriptome analyses on published datasets in order to better understand the interaction between the human host and the SARS-CoV-2 virus.
 
-The ideas proposed during this hackathon were divided into five projects (**Fig. 1**):
+The ideas proposed during this hackathon were divided into five projects (**Figure 1**):
 
 1. SARS-CoV-2 infection global analyses: Understanding how global gene expression in human cells responds to infection by the SARS-CoV-2 virus, including changes in gene regulatory networks.
 2. Human-virus interaction analyses: Identification of human RNA-binding proteins that might be key in the interaction between human cells and the RNA genome of SARS-CoV-2.
@@ -140,11 +145,7 @@ The ideas proposed during this hackathon were divided into five projects (**Fig.
 
 Projects 1 and 2 aim to identify human genes that are important in the process of viral infection of human cells. Projects 3 and 4 aim to take the candidate genes identified in projects 1 and 2, as well as by independent studies, and relate them to clinical information and to possible therapeutic interventions. All data analyzed during this study are fully available and meet the FAIR principles of **F**indability, **A**ccessibility, **I**nteroperability, and **R**eusability. Finally, Project 5 aims to package and containerize software and workflows used and generated here in a reusable manner, ultimately providing scalable and reproducible workflows.
 
-
-<figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig1.jpeg" width="800" align="middle">
-  <figcaption><b>Fig. 1</b>. Project structure and interaction. Project 1 and 2 along with literature research will provide a list of candidate genes for Project 3 and 4 that will take into account external factors (comorbidities, and potential drug treatments). All data analyzed during this project are fully available to the medical community and meet the FAIR principles. Finally, Project 5 allows the efforts of all of the previous projects to be clearly detailed into workflows for increased reproducibility.</figcaption>
-</figure>
+![Project structure and interaction. Project 1 and 2 along with literature research will provide a list of candidate genes for Project 3 and 4 that will take into account external factors (comorbidities, and potential drug treatments). All data analyzed during this project are fully available to the medical community and meet the FAIR principles. Finally, Project 5 allows the efforts of all of the previous projects to be clearly detailed into workflows for increased reproducibility. \label{fig}](./figures/Fig1.jpeg)
 
 
 # Background
@@ -170,29 +171,21 @@ Therefore, the objective of this working group was to carry out a comprehensive 
 
 ### Gene expression analysis of host response during SARS-CoV-2 infection (Pipeline 1)
 
-**Exploratory data analysis**
+*Exploratory data analysis*
 
-We used the first RNA-Seq dataset available of in vitro cells infected with SARS-CoV-2 (GSE147507), as mentioned in the previous section. We first performed a Principal Component Analysis (PCA) to bring out strong patterns in the data to analyze the overall effect of experimental covariates, and to identify unexpected outliers or batch effects. **Fig. 2** shows that there exist clear sources of variation in the data that need to be taken into account if cross-sample analyses were to be performed.
+We used the first RNA-Seq dataset available of in vitro cells infected with SARS-CoV-2 (GSE147507), as mentioned in the previous section. We first performed a Principal Component Analysis (PCA) to bring out strong patterns in the data to analyze the overall effect of experimental covariates, and to identify unexpected outliers or batch effects. **Figure 2** shows that there exist clear sources of variation in the data that need to be taken into account if cross-sample analyses were to be performed.
 
-
-<figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig2.png" align="middle" width="800">
-  <figcaption margin=><b>Fig. 2</b>. PCA analysis of samples used in this report. The first 2 components (~85% of total variance) showed different sources of variation in the data. Replicate samples from the same group cluster correctly together. The image on the left shows that different cell lines, i.e. A549 and NHBE, present strongly different expression profiles; the image on the right shows samples from the same batch cluster together. PC = principal component, vst = variance stabilizing transformation (Anders and Huber 2010).</figcaption>
-</figure><br/>
+![PCA analysis of samples used in this report. The first 2 components (~85% of total variance) showed different sources of variation in the data. Replicate samples from the same group cluster correctly together. The image on the left shows that different cell lines, i.e. A549 and NHBE, present strongly different expression profiles; the image on the right shows samples from the same batch cluster together. PC = principal component, vst = variance stabilizing transformation [@Anders2010-cy]. \label{fig}](./figures/Fig2.png)
 
 
 Since our aim was to find specific SARS-CoV-2-infection regulated genes, we decided to perform the downstream analyses on pairwise comparisons controls vs. infected within each experiment (batch), maintaining the different cell lines separated, and comparing the results of the differential expression and functional analyses across experiments.
 
-**Differentially expressed genes**
+*Differentially expressed genes*
 
-We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infection, whether detected in NHBE or in A549 cells. Fig. 3 shows the number of genes DE detected from each of the methods used: DESeq2 [@Love2014-jg], edgeR [@Robinson2010-lh] and limma-voom [@Law2014-jg]; for details, see the Methods section. In order to select SARS-CoV-2 specific genes, we selected among these DE genes only those that were not present in the other RSV and H1N1 infected cells. The full list has been made publicly available through the Zenodo platform (see the “Data, GitHub repositories and reproducible workflows” section). The top 15 genes up- and down-regulated are given in **Table 1** and **Table 2**.
+We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infection, whether detected in NHBE or in A549 cells. **Figure 3** shows the number of genes DE detected from each of the methods used: DESeq2 [@Love2014-jg], edgeR [@Robinson2010-lh] and limma-voom [@Law2014-jg]; for details, see the Methods section. In order to select SARS-CoV-2 specific genes, we selected among these DE genes only those that were not present in the other RSV and H1N1 infected cells. The full list has been made publicly available through the Zenodo platform (see the “Data, GitHub repositories and reproducible workflows” section). The top 15 genes up- and down-regulated are given in **Table 1** and **Table 2**.
 
+![Bar Plots depicting the number of genes DE from each of the three methods used and the overlap between them for each tested condition (see Methods). We validated as high confidence DE the genes detected at least in two methods. \label{fig}](./figures/Fig3.png)
 
-<figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig3.png" align="middle" width="800">
-  <figcaption><b>Fig. 3</b>. Bar Plots depicting the number of genes DE from each of the three methods used and the overlap between them for each tested condition (see Methods). We validated as high confidence DE the genes detected at least in two methods.</figcaption>
-</figure><br/>
-<br/>
 
 **Table 1**. Top 15 upregulated genes which were common to the three methods (only the log2FC and FDR-adjusted p-values from edgeR are indicated below).
 
@@ -236,35 +229,33 @@ We decided to focus on genes differentially expressed (DE) upon SARS-CoV-2 infec
 |  KRT15  |  -0.914  |  0.003 |
 <br/>
 
-**Functional enrichment analyses**
+*Functional enrichment analyses*
 
 Subsequently, we used GeneAnalytics [@Ben-Ari_Fuchs2016-sh] on the previous list of DE genes to detect enriched pathways and gene ontology terms. The complete results are available online following the FAIR principles (see “Data, GitHub repositories and reproducible workflows”). In general, SARS-CoV-2 datasets were enriched in pathways related to immune response, viral response, bacterial infection, receptor signalling pathways, among others, similar to the other two viral species tested. However, we could detect some interesting pathways enriched only in SARS-CoV-2 infections, namely lung fibrosis, chemokine superfamily pathway, IL-17 family signalling pathways and legionellosis (which is a severe type of bacterial pneumonia).
 
 ### Viral gene expression of SARS-CoV-2
 
-We estimated SARS-CoV-2 gene expression in samples infected with the virus. To this end, we used reads mapping to the SARS-CoV-2 Wuhan-Hu-1 reference genome (NC_045512.2), which ranged from 0.10% in NHBE cell lines to 0.03% in A549 of total reads. Our pipeline inferred the abundances of five different viral transcripts, one of them on the negative strand (**Table 3**). We performed hierarchical clustering based on these values as a proxy for viral gene expression. With the exception of one of the NHBE samples, A549 and NHBE samples clustered together, suggesting that viral expression was similar in both cell types (**Fig. 4**).
+We estimated SARS-CoV-2 gene expression in samples infected with the virus. To this end, we used reads mapping to the SARS-CoV-2 Wuhan-Hu-1 reference genome (NC_045512.2), which ranged from 0.10% in NHBE cell lines to 0.03% in A549 of total reads. Our pipeline inferred the abundances of five different viral transcripts, one of them on the negative strand (**Table 3**). We performed hierarchical clustering based on these values as a proxy for viral gene expression. With the exception of one of the NHBE samples, A549 and NHBE samples clustered together, suggesting that viral expression was similar in both cell types (**Figure 4**).
 
 
 **Table 3**. Viral gene expression of SARS-CoV-2 infected samples in FPKM (Fragments Per Kilobase of transcript per Million mapped reads). 
 
-| gene_id | SRX7990877 | SRX7990876 | SRX7990875 | SRX7990871 | SRX7990870 | SRX7990869 |
-|---------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|
-| MSTRG.1 | 1056.94     | 1356.43     | 1473.57     | 992.38      | 989.68      | 1290.11     |
-| MSTRG.2 | 0               | 0               | 0               | 0               | 0               | 2209.47     |
-| MSTRG.3 | 168254.63   | 211354.75    | 233342.98   | 162571.34    | 159455.20  | 166766.50   |
-| MSTRG.4 | 40704.32  | 33298.12     | 50809.79     | 18084.87    | 18338.65    | 21733.26    |
-| MSTRG.5 | 1107923.84 | 1059082.82 | 1201995.40  | 588801.78 | 1171678.71  | 1095029.75  |
+|  | MSTRG.1 | MSTRG.2 | MSTRG.3 | MSTRG.4 | MSTRG.5 |
+|---------|---------|---------|---------|---------|---------|
+| SRX7990877 | 1056.94 | 0 | 168254.63 | 40704.32 | 1107923.84 |
+| SRX7990876 | 1356.43 | 0 | 211354.75 | 33298.12 | 1059082.82 |
+| SRX7990875 | 1473.57 | 0 | 233342.98 | 50809.79 | 1201995.40 |
+| SRX7990871 | 992.38 | 0 | 162571.34 | 18084.87 | 588801.78 |
+| SRX7990870 | 989.68 | 0 | 159455.20 | 18338.65 | 1171678.71 |
+| SRX7990869 | 1290.11 | 2209.47 | 166766.50 | 21733.26 | 1095029.75 |
 
 
-<figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig4.png" align="middle" width="600">
-  <figcaption><b>Fig. 4</b>. Hierarchical clustering based on the first two principal components calculated from viral transcript abundances of samples infected with SARS-CoV-2. Samples are labeled with SRA identifiers and names of cell lines. Numbers represent technical replicates.</figcaption>
-</figure><br/>
+![Hierarchical clustering based on the first two principal components calculated from viral transcript abundances of samples infected with SARS-CoV-2. Samples are labeled with SRA identifiers and names of cell lines. Numbers represent technical replicates. \label{fig}](./figures/Fig4.png)
 
 
 ### Comparative analysis of host response to SARS-CoV-2, SARS-CoV-1, RSV, IAV, and MERS-CoV infections (Pipeline 2)
 
-**Gene expression analysis**
+*Gene expression analysis*
 
 These analyses included two other datasets that were not integrated in the previous pipeline, and that are further detailed in the datasets from the Methods section. Statistical analyses of the differential gene expression, transcript isoforms, functional terms, and signaling pathways yielded a large number of significant entities, even after applying multiple hypothesis correction (FDR-adjusted p-values or Bonferroni-adjusted p-values as detailed in **Table 4**, **Table 5**, **Table 6**, and **Table 7**).
 
@@ -345,7 +336,7 @@ These analyses included two other datasets that were not integrated in the previ
 |  GSE147507  |  SARS-CoV-2 (A549)  |  Infected vs mock  |  9  |
 
 
-**Integrative analysis**
+*Integrative analysis*
 
 Combining the results from the multiple pathway and functional enrichment analyses revealed 56 activated pathways and 185 inhibited pathways across the combined dataset. Of these, nine pathways were activated during SARS-CoV-2 infection, while four were inhibited. Six pathways were uniquely present during SARS-CoV-2 infection (e.g. “Complement and Coagulation Cascades”, “TRAF6 mediated induction of NF-kB and MAP kinase”, and “Cytokine Signaling in Immune system”). We also found two pathways that had opposite directionality during SARS-CoV-2 infection when compared to other viruses (Chemokine signaling, Plasminogen activating cascade). 
 
@@ -357,15 +348,15 @@ In both pathway and functional analyses, it became apparent that the response to
 
 In order to understand and detect key regulators playing a role during infection, we applied two different approaches: the first aimed at finding genes promoted by transposable elements (TEs), whereas the second focused on inferring regulatory motifs by modeling transcript isoform expression changes as a function of motif activity and the regulatory binding sites located within the promoter regions and the 3' UTRs of transcripts, respectively.
 
-**TE analysis**
+*TE analysis*
 
-TEs are DNA sequences that are able to move throughout the genome. The human genome is composed of nearly 50% of TEs [@Lander2001-aa], and while most of them are no longer able to transpose, LINE-1 and Alu elements are still active [@Brouha2003-fr][@Deininger2002-rw]. Cross-talk between exogenous viruses and TEs, especially endogenous retroviruses, through common regulatory pathways has been described in many model species [@Broecker2019-ke][@Ito2013-jj][@Miesen2016-kj]. A recent study has shown that upon viral infection, early TE upregulation is observed, independently of the virus type [@Macchietto2020-xs]. The authors suggest such upregulation might elicit the immune system at an early stage of infection. Hence, in order to fully understand the impact of SARS-CoV-2 infection of human cells, we searched for differences in TE expression using two different available tools, TEtools [@Lerat2017-dg], and TEtranscripts [@Jin2015-za]. We are currently computing the TE expression differences between controls and infected cells from [@Blanco-Melo2020-ep]. 
+TEs are DNA sequences that are able to move throughout the genome. The human genome is composed of nearly 50% of TEs [@Lander2001-aa], and while most of them are no longer able to transpose, LINE-1 and Alu elements are still active [@Brouha2003-fr; @Deininger2002-rw]. Cross-talk between exogenous viruses and TEs, especially endogenous retroviruses, through common regulatory pathways has been described in many model species [@Broecker2019-ke; @Ito2013-jj; @Miesen2016-kj]. A recent study has shown that upon viral infection, early TE upregulation is observed, independently of the virus type [@Macchietto2020-xs]. The authors suggest such upregulation might elicit the immune system at an early stage of infection. Hence, in order to fully understand the impact of SARS-CoV-2 infection of human cells, we searched for differences in TE expression using two different available tools, TEtools [@Lerat2017-dg], and TEtranscripts [@Jin2015-za]. We are currently computing the TE expression differences between controls and infected cells from [@Blanco-Melo2020-ep]. 
 
-**Analysis of regulation of gene expression**
+*Analysis of regulation of gene expression*
 
 Activities of regulators that can explain genome-wide expression changes observed upon viral infection were inferred by modelling them as a function of regulator binding sites in promoter regions and 3' UTRs, respectively, and the (unknown) activities of the regulators [@Balwierz2014-og].
 
-In both NHBE and A549 cells, among the motifs that are most significantly changing in activity upon infection with the SARS-CoV-2 virus are the interferon-regulatory factors (IRFs), which play critical roles in the cellular immune response to virus infection [@Chiang2018-zr][@Zhao2015-as]. The IRF motif activities are significantly higher compared to uninfected cells reflecting that the virus causes genome-scale upregulation of IFN-stimulated genes (ISGs). Similarly to IRFs, also the RELA transcriptional regulator exhibits significantly increased activity upon SARS-CoV-2 infection in both cell lines. Importantly, RELA is known to be crucial for inhibiting the replication of RNA viruses [@Wang2010-ow]. 
+In both NHBE and A549 cells, among the motifs that are most significantly changing in activity upon infection with the SARS-CoV-2 virus are the interferon-regulatory factors (IRFs), which play critical roles in the cellular immune response to virus infection [@Chiang2018-zr; @Zhao2015-as]. The IRF motif activities are significantly higher compared to uninfected cells reflecting that the virus causes genome-scale upregulation of IFN-stimulated genes (ISGs). Similarly to IRFs, also the RELA transcriptional regulator exhibits significantly increased activity upon SARS-CoV-2 infection in both cell lines. Importantly, RELA is known to be crucial for inhibiting the replication of RNA viruses [@Wang2010-ow]. 
 
 ## SARS-CoV-2 RNA contains binding sites for human proteins
 
@@ -486,26 +477,22 @@ A complementary approach was also applied to predict potential prophylactic or t
 
 Our analysis from Pipeline 1 regarding the dataset GSE147507 shows that SARS-CoV-2 elicits a transcriptional response in human cells with a total of 213 genes upregulated and 87 genes downregulated in NHBE cells. The response of A549 immortalized cells was milder as compared to primary cells, however we believe that the response from the primary epithelial cells can be seen as much closer to what happens in vivo. This is why we did not select only genes common to both cell types infected with SARS-CoV-2 for subsequent analyses, but rather a combination of them. Pipeline 2 detected a greater number of DE genes and isoforms, and of enriched functions as reported above, however, the results were for the most part comparable. 
 
-In general, the transcriptional response observed in SARS-CoV-2 was similar to a general viral response seen with the other viruses tested, in accordance to what was reported in the original preprint [@Blanco-Melo2020-ep]. The core gene signature induced by all three viruses tested (**Table 1** and **Table 2**) included *CSF3*, *IL6, *CXCL8* and type I Interferon Stimulated genes, which activate the innate immune system including NK cells, neutrophils and macrophages to clear the virus [@Newton2016-eo]. In the same direction, SARS-CoV-2 infection specifically upregulated the alarmins *S100A7* and *S100A8* and the proinflammatory cytokines *TNF*, *IL1A, *IL32* and *IL36G* that further activate the innate immune cells. More specifically, the Tumor Necrosis Factor Ligand Superfamily member protein (TNFSF14) has been shown to play a role in influenza virus infection [@Mejias2013-iq], west nile virus neuropathogenesis [@Koh2005-oh], innate and adaptive immune responses [@Schneider2004-uk], autoimmunity, inflammation and the T-cell response [@Lin2011-ms][@Ware2009-js], as well as intestinal inflammation [@Giles2018-li]. In addition, Matrix Metallopeptidase 9 (MMP9), which was also upregulated, has previously been reported as playing a role in viral pathogenesis. Upregulation of *MMP9* was shown to increase syncytia formation and gelatinolytic activity during RSV infection [@Yeo2002-af], increased plasma leakage during dengue virus infection [@Her2017-ss], and increased lung pathology during influenza A virus infection [@Lee2013-eh].
+In general, the transcriptional response observed in SARS-CoV-2 was similar to a general viral response seen with the other viruses tested, in accordance to what was reported in the original preprint [@Blanco-Melo2020-ep]. The core gene signature induced by all three viruses tested (**Table 1** and **Table 2**) included *CSF3, IL, CXCL8* and type I Interferon Stimulated genes, which activate the innate immune system including NK cells, neutrophils and macrophages to clear the virus [@Newton2016-eo]. In the same direction, SARS-CoV-2 infection specifically upregulated the alarmins *S100A7* and *S100A8* and the proinflammatory cytokines *TNF, IL1A, IL32* and *IL36G* that further activate the innate immune cells. More specifically, the Tumor Necrosis Factor Ligand Superfamily member protein (TNFSF14) has been shown to play a role in influenza virus infection [@Mejias2013-iq], west nile virus neuropathogenesis [@Koh2005-oh], innate and adaptive immune responses [@Schneider2004-uk], autoimmunity, inflammation and the T-cell response [@Lin2011-ms; @Ware2009-js], as well as intestinal inflammation [@Giles2018-li]. In addition, Matrix Metallopeptidase 9 (MMP9), which was also upregulated, has previously been reported as playing a role in viral pathogenesis. Upregulation of *MMP9* was shown to increase syncytia formation and gelatinolytic activity during RSV infection [@Yeo2002-af], increased plasma leakage during dengue virus infection [@Her2017-ss], and increased lung pathology during influenza A virus infection [@Lee2013-eh].
 
-*CSF2*, which is also known as Granulocyte Macrophage-Colony Stimulating Factor (*GM-CSF*) was one of the top up-regulated genes. This cytokine promotes differentiation, recruitment and activation of neutrophils and macrophages [@Becher2016-pc]. An overactivation of macrophages and neutrophils can lead to what is known as cytokine storm that can end up in acute lung injury and acute respiratory distress syndrome (ARDS) [@Confalonieri2017-tt]. Although the presence of GM-CSF has been shown to be protective against influenza A virus infection in animal models [@Huang2011-mo], it is possible that the extremely high levels of *GM-CSF* expression during SARS-CoV-2 infection contributes to this cytokine storm. Furthermore, the cytokine storm has been proposed as the underlying cause for the fatal outcome in severe COVID-19 cases. In this line, IL-32 and IL-36g have been implicated in ARDS [@Aoyagi2017-mf][@Arcaroli2011-ij].
+*CSF2*, which is also known as Granulocyte Macrophage-Colony Stimulating Factor (*GM-CSF*) was one of the top up-regulated genes. This cytokine promotes differentiation, recruitment and activation of neutrophils and macrophages [@Becher2016-pc]. An overactivation of macrophages and neutrophils can lead to what is known as cytokine storm that can end up in acute lung injury and acute respiratory distress syndrome (ARDS) [@Confalonieri2017-tt]. Although the presence of GM-CSF has been shown to be protective against influenza A virus infection in animal models [@Huang2011-mo], it is possible that the extremely high levels of *GM-CSF* expression during SARS-CoV-2 infection contributes to this cytokine storm. Furthermore, the cytokine storm has been proposed as the underlying cause for the fatal outcome in severe COVID-19 cases. In this line, IL-32 and IL-36g have been implicated in ARDS [@Aoyagi2017-mf; @Arcaroli2011-ij].
 
-COVID-19 patients present atypical viral-induced pneumonia with preserved lung function for reasons not clearly understood [@Grasselli2020-lx]. Although purely speculative at this point, it is possible that the marked hypoxemia produced by SARS-CoV-2 infection stems from a deficient lung perfusion. Inspection of the top upregulated genes specifically in SARS-CoV-2 infected NHBE cells identified genes that are also induced during CO intoxication (*SPRR2E*, *SPRR2D*, SPRR2A*) and malaria infection (*VNN3*, *VNN1*, *MMP9*) [@Min-Oo2007-rz][@Prato2011-ux][@Zheng2009-xx]. Interestingly, ongoing clinical trials are trying to assess the efficacy of hyperbaric oxygen chambers used in CO intoxication (https://clinicaltrials.gov/ct2/show/NCT04332081) or the antimalarial drug hydroxycloroquine (https://clinicaltrials.gov/ct2/show/NCT04332991) for the treatment of COVID-19.
+COVID-19 patients present atypical viral-induced pneumonia with preserved lung function for reasons not clearly understood [@Grasselli2020-lx]. Although purely speculative at this point, it is possible that the marked hypoxemia produced by SARS-CoV-2 infection stems from a deficient lung perfusion. Inspection of the top upregulated genes specifically in SARS-CoV-2 infected NHBE cells identified genes that are also induced during CO intoxication (*SPRR2E*, *SPRR2D*, *SPRR2A*) and malaria infection (*VNN3*, *VNN1*, *MMP9*) [@Min-Oo2007-rz; @Prato2011-ux; @Zheng2009-xx]. Interestingly, ongoing clinical trials are trying to assess the efficacy of hyperbaric oxygen chambers used in CO intoxication (https://clinicaltrials.gov/ct2/show/NCT04332081) or the antimalarial drug hydroxycloroquine (https://clinicaltrials.gov/ct2/show/NCT04332991) for the treatment of COVID-19.
 
-Several high-confidence down-regulated genes from (Table 2) were also of interest given their role in host immune response and cytokine signaling. CD86 is commonly associated with immune activation and antigen presentation [@Na-Ek2017-gh], so decreasing its expression could enable SARS-CoV-2 to partially avoid the activation of the adaptive immune response, which is required to complete clearance of the virus. Pro-interleukin-16 (IL16) was also identified as downregulated during SARS-CoV-2 infection. Caspase-3 cleaves the IL16 precursor protein into the bioactive form [@Zhang1998-bc], which then actively promotes CD4+ T-cell migration [@Severa2019-fa]. IL16 is produced at higher levels, which causes increased pathogenesis during influenza A virus infection [@Turianova2020-jk], and reduces HIV replication [@Amiel1999-jn]. It is therefore logical that generating a productive SARS-CoV-2 infection would require lower amounts of IL16. A proposed overview of the mechanisms detected in this study can be seen in **Fig. 5**.
+Several high-confidence down-regulated genes from (Table 2) were also of interest given their role in host immune response and cytokine signaling. CD86 is commonly associated with immune activation and antigen presentation [@Na-Ek2017-gh], so decreasing its expression could enable SARS-CoV-2 to partially avoid the activation of the adaptive immune response, which is required to complete clearance of the virus. Pro-interleukin-16 (IL16) was also identified as downregulated during SARS-CoV-2 infection. Caspase-3 cleaves the IL16 precursor protein into the bioactive form [@Zhang1998-bc], which then actively promotes CD4+ T-cell migration [@Severa2019-fa]. IL16 is produced at higher levels, which causes increased pathogenesis during influenza A virus infection [@Turianova2020-jk], and reduces HIV replication [@Amiel1999-jn]. It is therefore logical that generating a productive SARS-CoV-2 infection would require lower amounts of IL16. A proposed overview of the mechanisms detected in this study can be seen in **Figure 5**.
 
-
-<figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig5.png" align="middle" width="450">
-  <figcaption><b>Fig. 5</b>. Proposed mechanisms of action for SARS-CoV-2 infection of bronchial epithelial cells detected in this study. SARS-CoV-2 induced genes in NHBE cells include genes shared with infections by other respiratory viruses such as IFN and IL-6 but also some specific genes such as GM-CSF or IL-32. The release of these cytokines from the infected lung epithelium results in the recruitment, differentiation and activation of the innate immune cells such as NK, macrophages or neutrophils.</figcaption>
-</figure><br/>
+![Proposed mechanisms of action for SARS-CoV-2 infection of bronchial epithelial cells detected in this study. SARS-CoV-2 induced genes in NHBE cells include genes shared with infections by other respiratory viruses such as IFN and IL-6 but also some specific genes such as GM-CSF or IL-32. The release of these cytokines from the infected lung epithelium results in the recruitment, differentiation and activation of the innate immune cells such as NK, macrophages or neutrophils. \label{fig}](./figures/Fig5.png)
 
 
-To identify regulators that can explain the genome-scale expression changes that occur upon virus infection we have performed motif activity response analysis [@Balwierz2014-og]. Among the motifs that were consistently inferred for NHBE and A549 cells are the RELA transcriptional regulator as well as interferon-regulatory factors (IRFs), which have previously been reported to act in the response to virus infection [@Chiang2018-zr][@Wang2010-ow][@Zhao2015-as].
+To identify regulators that can explain the genome-scale expression changes that occur upon virus infection we have performed motif activity response analysis [@Balwierz2014-og]. Among the motifs that were consistently inferred for NHBE and A549 cells are the RELA transcriptional regulator as well as interferon-regulatory factors (IRFs), which have previously been reported to act in the response to virus infection [@Chiang2018-zr; @Wang2010-ow; @Zhao2015-as].
 
 Additionally, we identified 38 human RNA-binding proteins as putative binding partners of SARS-CoV-2 genomic or intermediate RNA molecules. These include 2 proteins (PABPC1, PABPC4) that have been experimentally shown to interact with the SARS-CoV-2 N protein [@Gordon2020-hk], suggesting that they may form part of a combined RNA-protein complex including both host and viral regulatory proteins.
 
-Many of the top hits are already known to interact functionally with other RNA viruses and we may hypothesize that they perform similar functions in interacting with SARS-CoV-2. For example, hnRNPA1 binds to multiple regions on the Mouse Hepatitis Virus (MHV) genome and there is evidence that it is involved in viral RNA synthesis [@Shi2000-cr]. HNRNPL binds to Hepatitis Delta Virus (HDV) RNA [@Sikora2009-yg] while the SRSF proteins are splicing factors that interact with many RNA viruses, including a porcine coronavirus [@Jourdan2012-hh]. Some of the proteins identified in our analysis regulate the stability of human mRNA (PABP, ELAVL1, ZFP36), or control the initiation of translation (PABP). It was found that RNA viruses can bind to host RBPs, thereby sequestering them from the nucleus into the cytoplasm [@Barnhart2013-lv]. Therefore, interactions of viral RNA with host proteins could have two roles. First, some of these interactions may play important or essential roles in SARS-CoV-2 replication, transcription or translation; and second, the interaction of human RNA-binding proteins with viral RNA may change their availability for human mRNAs, leading to indirect changes in host gene expression. The latter was reported to take place upon infection with the Sindbis virus [@Barnhart2013-lv]. Several RBPs detected in our analysis are known to be involved in pre-mRNA processing. For instance, the FUS and PTBP1 RBPs are involved in both splicing and 3’ end processing [@Gruber2018-fe][@Linares2015-ja][@Masuda2016-va]. Thus, it is conceivable that SARS-CoV-2 impacts these host cell processes by sequestering RBPs involved.
+Many of the top hits are already known to interact functionally with other RNA viruses and we may hypothesize that they perform similar functions in interacting with SARS-CoV-2. For example, hnRNPA1 binds to multiple regions on the Mouse Hepatitis Virus (MHV) genome and there is evidence that it is involved in viral RNA synthesis [@Shi2000-cr]. HNRNPL binds to Hepatitis Delta Virus (HDV) RNA [@Sikora2009-yg] while the SRSF proteins are splicing factors that interact with many RNA viruses, including a porcine coronavirus [@Jourdan2012-hh]. Some of the proteins identified in our analysis regulate the stability of human mRNA (PABP, ELAVL1, ZFP36), or control the initiation of translation (PABP). It was found that RNA viruses can bind to host RBPs, thereby sequestering them from the nucleus into the cytoplasm [@Barnhart2013-lv]. Therefore, interactions of viral RNA with host proteins could have two roles. First, some of these interactions may play important or essential roles in SARS-CoV-2 replication, transcription or translation; and second, the interaction of human RNA-binding proteins with viral RNA may change their availability for human mRNAs, leading to indirect changes in host gene expression. The latter was reported to take place upon infection with the Sindbis virus [@Barnhart2013-lv]. Several RBPs detected in our analysis are known to be involved in pre-mRNA processing. For instance, the FUS and PTBP1 RBPs are involved in both splicing and 3’ end processing [@Gruber2018-fe; @Linares2015-ja; @Masuda2016-va]. Thus, it is conceivable that SARS-CoV-2 impacts these host cell processes by sequestering RBPs involved.
 
 Interestingly, many of these RBPs show significant expression changes in SARS-CoV-2 infected cells, suggesting mutual regulation between the virus and the host cell. Moreover, we found several RBPs whose binding sites are enriched on the SARS-CoV-2 genome but not those of related coronaviruses. Discovering the roles of these proteins may help understand the remarkable pathogenicity of SARS-CoV-2.
 
@@ -571,17 +558,13 @@ Quality control using FastQC and MultiQC was performed to ensure that the data u
 
 Two different protocols were used to process the data for comparison purposes. The first one, based on STAR [@Dobin2013-iw], carries out alignments to the human genome, allowing for recognition of reads mapping to introns which could then be relevant for alternative splicing and regulatory analyses. The second one is based on ARMOR [@Orjuela2019-qp], aligning the reads to the transcriptome instead.
 
-In the first processing workflow (**Fig. 6**), STAR was used to map the reads from GSE147507 experiments (April 7th 2020) listed above to the human reference genome GRCh38 (GENCODE 24) and samtools [@Li2009-ko] was employed to convert the resulting SAM files and sort them to produce BAM files. Counts were then calculated using StringTie [@Pertea2015-ze] and the output data was postprocessed with an auxiliary Python script provided by the developers of the same software to produce files ready for the following downstream analyses.
+In the first processing workflow (**Figure 6**), STAR was used to map the reads from GSE147507 experiments (April 7th 2020) listed above to the human reference genome GRCh38 (GENCODE 24) and samtools [@Li2009-ko] was employed to convert the resulting SAM files and sort them to produce BAM files. Counts were then calculated using StringTie [@Pertea2015-ze] and the output data was postprocessed with an auxiliary Python script provided by the developers of the same software to produce files ready for the following downstream analyses.
 
 Subsequently, an exploratory data analysis was carried out based on the transformed values obtained after applying the variance stabilizing transformation [@Anders2010-cy] implemented in the vst() function of DESeq2 [@Love2014-jg]. Principal component analysis (PCA) was performed to evaluate the main sources of variation in the data. EdgeR [@Robinson2010-lh], Limma-voom [@Law2014-jg] and DESeq2 were then used to obtain pairwise differential expression, applying a statistical cut-off of 0.05 for the adjusted p-value, retaining only the set of genes which are identified by at least two methods across the condition of interest. The P-values obtained were adjusted using the Benjamini-Hochberg method. Finally, a comprehensive enrichment analysis was performed employing GeneAnalytics [@Ben-Ari_Fuchs2016-sh], including Gene Ontology (GO) and pathway enrichment analyses. Within GeneAnalytics, p-values are calculated assuming an underlying binomial distribution and corrected for multiple comparison using False Discovery Rate (FDR).
 
 Reads were also aligned against the SARS-CoV-2 Wuhan-Hu-1 reference genome (NC_045512.2) using HISAT2 v2.2.0. Thereafter, reads that aligned to both the human and virus reference genome with the same edit distance were discarded. At last, StringTie v2.1.1 was used for gene count generation for the viral reads.
 
-
-<figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig6.jpeg" align="middle" width="700">
-  <figcaption><b>Fig. 6</b>. Overview of the workflow for the analysis of RNA-seq data from cells infected with viruses.</figcaption>
-</figure><br/>
+![Overview of the workflow for the analysis of RNA-seq data from cells infected with viruses. \label{fig}](./figures/Fig6.jpeg)
 
 
 The highly reproducible, containerized pipeline was implemented in Nextflow based on the nf-core framework [@Ewels2020-nb] to enable its reuse with additional datasets (see Project 5). A step for read filtration was included in the workflow, in which 0.01% of common reads between the human and virus reference genomes were removed. This was solely based on the observation that 0.03% reads mapped to the virus reference genome for infected human samples while, as expected, nearly no reads mapped to the virus for the uninfected human samples.
@@ -612,7 +595,7 @@ The RNA-sequencing reads from a COPD related dataset involving human clinical sa
 
 ### Analysis of HLA types that predispose individuals and populations to COVID-19 infection and mortality
 
-Patient HLA types were determined using Optitype [@Szolek2014-w] v1.3.2 from RNA-seq data. The analysis was performed considering at least three replicates with the highest coverage for each cell line to confirm the results.
+Patient HLA types were determined using Optitype [@Szolek2014-wq] v1.3.2 from RNA-seq data. The analysis was performed considering at least three replicates with the highest coverage for each cell line to confirm the results.
 
 ## Project 4: Identification of potential pharmacological treatments
 
@@ -622,20 +605,16 @@ A complementary analysis used an existing method [@Martinez_Viedma2018-fe] to re
 
 ## Project 5: Reproducible workflows
 
-With the goal of making our protocols available to the scientific community, we have packaged the software and pipeline described in Project 1 Pipeline 1. The fully reproducible, containerized pipeline was implemented in Nextflow [@Di_Tommaso2017-ny] based on the nf-core framework [@Ewels2020-nb] to enable the reuse for additional data sets and verification generated results. **Fig. 7** depicts the proposed reproducible workflow. The pipeline for this workflow can be found at  https://github.com/chelauk/covidhackathon.
+With the goal of making our protocols available to the scientific community, we have packaged the software and pipeline described in Project 1 Pipeline 1. The fully reproducible, containerized pipeline was implemented in Nextflow [@Di_Tommaso2017-ny] based on the nf-core framework [@Ewels2020-nb] to enable the reuse for additional data sets and verification generated results. **Figure 7** depicts the proposed reproducible workflow. The pipeline for this workflow can be found at  https://github.com/chelauk/covidhackathon.
 
 Additionally, all the software described in this manuscript has been made available using Docker [@Merkel2014-zn] containers. As part of our future work, we aim to make a similar pipeline available for the analysis in Project 2.
 
-
-<figure>
-  <img src="https://github.com/avantikalal/covid-gene-expression/blob/vBH-report/report/figures/Fig7.jpeg" align="middle" width="400">
-  <figcaption><b>Fig. 7</b>. Nextflow workflow for Project 1 and pre-processing steps.</figcaption>
-</figure><br/>
+![Nextflow workflow for Project 1 and pre-processing steps. \label{fig}](./figures/Fig7.jpeg)
 
 
 # Data, GitHub repositories and reproducible workflows
 
-Following the FAIR principles, data, code and reproducible workflows have been made publicly available under open licenses (MIT license for code, CC0 license for data). Specifically, code, software and containers created as part of this effort are available at https://github.com/avantikalal/covid-gene-expression (Commit c5c543d20e956c086abd96c15a04f53eb3aee089). Furthermore, all relevant data generated here have been deposited at Zenodo. See DOI 10.5281/zenodo.3748026 for links to all individual datasets and to a snapshot of the previous code repository. The software developed is registered under the MIT license and the data generated under a CC0 license.
+Following the FAIR principles, data, code and reproducible workflows have been made publicly available under open licenses (MIT license for code, CC0 license for data). Specifically, code, software and containers created as part of this effort are available at https://github.com/avantikalal/covid-gene-expression (Commit 6a29861e66911a6cbfb709c99002d3255aa88fbd). Furthermore, all relevant data generated here have been deposited at Zenodo. See DOI 10.5281/zenodo.3748026 for links to all individual datasets and to a snapshot of the previous code repository. The software developed is registered under the MIT license and the data generated under a CC0 license.
 
 
 # Acknowledgement
